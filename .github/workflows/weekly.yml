@@ -12,9 +12,13 @@ on:
       url:
         description: "Article URL (optional, default = newest)"
         required: false
+      notify_week:
+        description: "Only re-send the notification for this stored week (e.g. 2026-w42)"
+        required: false
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   scrape:
@@ -27,6 +31,7 @@ jobs:
       - run: pip install beautifulsoup4
       - run: python tests/test_parse.py
       - name: Scrape
+        if: ${{ !github.event.inputs.notify_week }}
         env:
           ARTICLE_URL: ${{ github.event.inputs.url }}
         run: |
@@ -36,13 +41,38 @@ jobs:
             python scraper/scrape.py
           fi
       - name: Commit new data
+        id: commit
+        env:
+          NOTIFY_WEEK: ${{ github.event.inputs.notify_week }}
         run: |
+          if [ -n "$NOTIFY_WEEK" ]; then
+            echo "file=docs/data/archive/$NOTIFY_WEEK.json" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           git config user.name "new-albums-bot"
           git config user.email "actions@users.noreply.github.com"
           git add docs/data
+          new=$(git diff --cached --name-only --diff-filter=A -- docs/data/archive | grep '\.json$' | sort | tail -1 || true)
           if git diff --cached --quiet; then
             echo "nothing new"
           else
             git commit -m "data: new albums week $(date +%G-%V)"
             git push
           fi
+          echo "file=$new" >> "$GITHUB_OUTPUT"
+      - name: Notify (issue -> GitHub emails the repo owner)
+        if: ${{ steps.commit.outputs.file != '' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FILE: ${{ steps.commit.outputs.file }}
+          PAGE: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          python scraper/notify_body.py "$FILE" "$PAGE" "@$OWNER" > body.md
+          title=$(head -1 body.md); tail -n +2 body.md > issue.md
+          gh label create new-week --color 1a7f4b --description "Weekly new albums notification" 2>/dev/null || true
+          # close last week's notification so only the current one stays open
+          for n in $(gh issue list --label new-week --state open --json number -q '.[].number'); do
+            gh issue close "$n" --comment "Superseded by a newer week."
+          done
+          gh issue create --title "$title" --body-file issue.md --label new-week --assignee "$OWNER"

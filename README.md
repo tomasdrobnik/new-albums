@@ -4,7 +4,8 @@ Weekly flow: musicserver.cz "Nové desky" article → JSON (artist, title, genre
 
 - `scraper/scrape.py` – finds the newest "Nové desky" article, extracts artist / title / genre tags only (no descriptions), writes `docs/data/archive/YYYY-wWW.json`, `index.json`, `tags.json`.
 - `.github/workflows/weekly.yml` – runs Wed 15:30 UTC (+ Thu/Fri fallbacks), commits new data. Idempotent.
-- `docs/index.html` – static page (GitHub Pages). Favourite tags preselect albums; you tick/untick; "Find on Spotify" matches albums; you review; "Create playlist" builds a private playlist with all tracks of the confirmed albums.
+- Notification: when a new week is stored, the Action opens a GitHub issue (label `new-week`) assigned to the repo owner, with a link to the page for that week. GitHub emails it to you (Settings → Notifications → Email must be on for "Participating"/"Watching"). The previous week's issue is closed. Re-send: Run workflow with `notify_week` = e.g. `2026-w42`.
+- `docs/index.html` – static page (GitHub Pages). Sections are collapsible (genre highlights open, the rest collapsed). Highlights show the article text, loaded live from musicserver.cz through the r.jina.ai reader in your browser and cached locally; it is not stored in the repo. Favourite tags preselect albums; you tick/untick; "Find on Spotify" matches albums; you review; "Create playlist" builds a private playlist with all tracks of the confirmed albums.
 
 ## One-time setup
 

@@ -39,6 +39,14 @@
   #bar .grow { flex:1; min-width:140px; }
   #log { white-space:pre-wrap; font:12px/1.4 ui-monospace,Menlo,monospace; color:var(--mut); max-height:180px; overflow:auto; }
   .hidden { display:none !important; }
+  details.sec > summary { cursor:pointer; list-style:none; font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--mut); margin:18px 0 6px; font-weight:700; }
+  details.sec > summary::-webkit-details-marker { display:none; }
+  details.sec > summary::before { content:"▸ "; }
+  details.sec[open] > summary::before { content:"▾ "; }
+  .desc { grid-column:2; margin-top:4px; font-size:14px; }
+  .desc > summary { cursor:pointer; color:var(--mut); font-size:12px; }
+  .desc p { margin:4px 0 6px; }
+  .desc .src { font-size:12px; }
 </style>
 </head>
 <body>
@@ -119,7 +127,8 @@ const API = "https://api.spotify.com/v1";
 const DEFAULT_CLIENT_ID = "bb96d763205c40848e69bdb0f4faa2dd";
 const clientId = () => ls.get("na.clientId", "") || DEFAULT_CLIENT_ID;
 
-let state = { weekFile: null, week: null, albums: [], sel: new Set(), fav: ls.get("na.fav", []), matches: {} };
+let state = { weekFile: null, week: null, albums: [], sel: new Set(), fav: ls.get("na.fav", []), matches: {},
+  open: new Set(["main"]), desc: {}, descState: "idle", descClosed: new Set() };
 
 /* ---------- data ---------- */
 async function init() {
@@ -135,7 +144,11 @@ async function init() {
       const tags = await (await fetch("data/tags.json", { cache: "no-store" })).json();
       $("tagList").innerHTML = Object.keys(tags).map((t) => `<option value="${esc(t)}">`).join("");
     } catch {}
-    if (idx.weeks.length) await loadWeek(idx.weeks[0]);
+    // ?week=2026-w43 (link from the weekly notification) picks that week
+    const want = new URLSearchParams(location.search).get("week");
+    const first = idx.weeks.find((w) => want && w.startsWith(want)) || idx.weeks[0];
+    $("week").value = first;
+    if (idx.weeks.length) await loadWeek(first);
     else $("meta").textContent = "No data yet. Run the weekly workflow once.";
   } catch (e) {
     $("meta").textContent = "Cannot load data/index.json (run the workflow first). " + e;
@@ -152,6 +165,60 @@ async function loadWeek(file) {
   state.sel = new Set(saved ?? preselected());
   $("plName").value = `New albums ${d.year}-W${String(d.week).padStart(2, "0")}`;
   render();
+  loadDescriptions(file, d.source_url);
+}
+
+/* ---------- article text ----------
+   The text is not stored in the repo (the source site forbids reuse). It is read live
+   from the article in your browser via the r.jina.ai reader and cached locally. */
+const slug = (s) => s.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().replace(/ /g, "-");
+const mdText = (s) => s.replace(/!\[[^\]]*\]\([^)]*\)/g, "").replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/\*\*|__/g, "").replace(/(^|\s)_([^_]+)_(?=\s|$)/g, "$1$2").trim();
+
+function parseArticleMd(md) {
+  const out = {};
+  for (const block of md.split(/\n\s*\* \* \*\s*\n/)) {
+    const m = block.match(/\*\*(.+?)\*\*\s*\n\s*žánr:[^\n]*\n([\s\S]*)/);
+    if (!m) continue;
+    const head = mdText(m[1]);
+    const dash = head.indexOf(" - ");
+    if (dash < 0) continue;
+    const id = slug(head.slice(0, dash)) + "__" + slug(head.slice(dash + 3));
+    const paras = m[2].split(/\n\s*\n/).map((p) => p.trim())
+      .filter((p) => p && !/^\[?!\[/.test(p) && !/^(#|Tweet|DOPORUČENÉ)/i.test(p))
+      .map(mdText).filter((p) => p.length > 1);
+    if (paras.length) out[id] = paras;
+  }
+  return out;
+}
+
+async function loadDescriptions(file, url) {
+  const key = "na.desc." + file;
+  const cached = ls.get(key, null);
+  if (cached && Object.keys(cached).length) { state.desc = cached; state.descState = "ok"; return render(); }
+  state.desc = {}; state.descState = "loading"; render();
+  try {
+    const r = await fetch("https://r.jina.ai/" + url, { signal: AbortSignal.timeout(45000) });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    const d = parseArticleMd(await r.text());
+    if (state.weekFile !== file) return;
+    state.desc = d; state.descState = Object.keys(d).length ? "ok" : "fail";
+    if (state.descState === "ok") ls.set(key, d);
+  } catch (e) {
+    if (state.weekFile !== file) return;
+    state.descState = "fail"; log("Article text not loaded (" + e.message + "). Use the source link.");
+  }
+  render();
+}
+
+function descHtml(a) {
+  const src = state.week?.source_url;
+  const link = src ? `<a class="src" href="${esc(src)}" target="_blank" rel="noopener">Read on musicserver.cz ↗</a>` : "";
+  const p = state.desc[a.id];
+  if (!p) {
+    if (state.descState === "loading") return `<div class="desc mut">Loading article text… ${link}</div>`;
+    return `<div class="desc">${link}</div>`;
+  }
+  return `<details class="desc" data-desc="${esc(a.id)}" ${state.descClosed.has(a.id) ? "" : "open"}><summary>Article text</summary>${p.map((x) => `<p>${esc(x)}</p>`).join("")}${link}</details>`;
 }
 
 function favMatch(a) {
@@ -177,7 +244,9 @@ function render() {
   let html = "";
   for (const k of Object.keys(KIND_LABEL)) {
     if (!groups[k]) continue;
-    html += `<h2>${KIND_LABEL[k]} (${groups[k].length})</h2><section class="card">`;
+    // filtering opens every section so matches are visible
+    const open = state.open.has(k) || !!$("filter").value.trim();
+    html += `<details class="sec" data-kind="${k}" ${open ? "open" : ""}><summary>${KIND_LABEL[k]} (${groups[k].length})</summary><section class="card">`;
     for (const a of groups[k]) {
       const m = state.matches[a.id];
       const tags = a.tags.map((t) => `<span class="chip ${state.fav.some((f) => t.includes(f) || f.includes(t)) ? "fav" : ""}">${esc(t)}</span>`).join("");
@@ -185,13 +254,14 @@ function render() {
         <input type="checkbox" ${state.sel.has(a.id) ? "checked" : ""} aria-label="Select ${esc(a.title)}">
         <div class="t"><b>${esc(a.artist)}</b> – ${esc(a.title)}<div class="tags">${tags}</div></div>
         ${m ? matchHtml(a, m) : ""}
+        ${a.kind === "main" ? descHtml(a) : ""}
       </div>`;
     }
-    html += "</section>";
+    html += "</section></details>";
   }
   $("list").innerHTML = html || '<p class="mut">Nothing to show.</p>';
   const w = state.week;
-  $("meta").textContent = w ? `Week ${w.week}/${w.year}, published ${w.published || "?"}, ${state.albums.length} albums. Source: ${w.source_url}` : "";
+  $("meta").innerHTML = w ? `Week ${w.week}/${w.year}, published ${esc(w.published || "?")}, ${state.albums.length} albums. <a href="${esc(w.source_url)}" target="_blank" rel="noopener">Source article on musicserver.cz ↗</a>` : "";
   updateBar();
 }
 
@@ -433,6 +503,12 @@ $("btnClear").addEventListener("click", () => { state.sel.clear(); saveSel(); re
 $("btnVis").addEventListener("click", () => { state.albums.filter(visible).forEach((a) => state.sel.add(a.id)); saveSel(); render(); });
 $("btnMatch").addEventListener("click", matchSelected);
 $("btnCreate").addEventListener("click", createPlaylist);
+// remember which sections / texts you opened or closed (toggle events don't bubble)
+$("list").addEventListener("toggle", (e) => {
+  const t = e.target;
+  if (t.dataset?.kind) t.open ? state.open.add(t.dataset.kind) : state.open.delete(t.dataset.kind);
+  if (t.dataset?.desc) t.open ? state.descClosed.delete(t.dataset.desc) : state.descClosed.add(t.dataset.desc);
+}, true);
 $("list").addEventListener("click", (e) => {
   const row = e.target.closest(".album"); if (!row) return;
   const id = row.dataset.id;

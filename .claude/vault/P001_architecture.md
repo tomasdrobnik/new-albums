@@ -15,6 +15,8 @@ Weekly pipeline: musicserver.cz "Nové desky" article → JSON → static checkl
 - Scraper `scraper/scrape.py` (Python + BeautifulSoup) writes `docs/data/archive/YYYY-wWW.json`, `index.json`, `tags.json`
 - GitHub Action `weekly.yml`: Wed 15:30 UTC + Thu/Fri 06:30 fallbacks; idempotent ("already stored"), commits only new data
 - Client ID built into `docs/index.html` (`DEFAULT_CLIENT_ID`), so each new browser needs only Connect + Agree
+- Weekly email = Action opens issue (label `new-week`, assigned to owner, links `?week=YYYY-wWW`); body from `scraper/notify_body.py`; old issue closed
+- Article text for genre albums loaded live via `https://r.jina.ai/<article>` (~16 s), cached in localStorage `na.desc.<week>`; NOT stored in repo (site footer forbids reuse)
 - Page does Spotify auth with Authorization Code + PKCE in the browser; no client secret; token in localStorage
 
 ---
@@ -36,6 +38,7 @@ Weekly pipeline: musicserver.cz "Nové desky" article → JSON → static checkl
 - Only ~20-25 albums/week have a genre line; rest are untagged and never preselected
 - Week 42/2026 article had no "V krátkosti" section — parser handles missing sections
 - Article usually published Wednesday afternoon CET; week number in URL, not ISO week
+- Public CORS proxies tested 2026-11-03: corsproxy.io 401 (needs key), allorigins 408, codetabs/cors.lol/whateverorigin fail; only r.jina.ai works
 
 ---
 
@@ -47,6 +50,7 @@ Weekly pipeline: musicserver.cz "Nové desky" article → JSON → static checkl
 
 ## History
 
+- 2026-11-03: Added live article text, collapsible sections, source links, issue-email notification
 - 2026-11-03: Client ID built into page (was paste-per-browser; user saw "not connected" in own browser)
 - 2026-11-03: Repo created, Pages enabled, week 42 stored, Spotify linked, first playlist "New albums 2026-W42" (6 albums, 63 tracks) created; Action verified via manual run
 - 2026-11-03: Initial documentation
