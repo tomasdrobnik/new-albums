@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New albums</title>
+<style>
+  :root { --bg:#fafaf8; --fg:#1c1c1a; --mut:#6b6b66; --card:#fff; --line:#dedcd5; --acc:#1a7f4b; --warn:#b26a00; --bad:#b3261e; --chip:#eceae3; --hi:#d9f0e2; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#161614; --fg:#ecebe6; --mut:#9a9a92; --card:#1f1f1c; --line:#34342f; --acc:#4cc38a; --warn:#e0a030; --bad:#f2837b; --chip:#2b2b27; --hi:#1d3a2b; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; padding-bottom:84px; }
+  header, main { max-width:900px; margin:0 auto; padding:0 16px; }
+  header { padding-top:16px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; }
+  h1 { font-size:20px; margin:0; }
+  section.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px 14px; margin:12px 0; }
+  label.small, .mut { color:var(--mut); font-size:13px; }
+  input[type=text], select { font:inherit; color:inherit; background:var(--bg); border:1px solid var(--line); border-radius:6px; padding:6px 8px; }
+  input[type=text] { min-width:0; }
+  button { font:inherit; cursor:pointer; border:1px solid var(--line); background:var(--card); color:var(--fg); border-radius:6px; padding:6px 11px; }
+  button.primary { background:var(--acc); color:#fff; border-color:var(--acc); }
+  button:disabled { opacity:.5; cursor:default; }
+  .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  .chip { display:inline-flex; gap:4px; align-items:center; background:var(--chip); border-radius:99px; padding:1px 9px; font-size:12px; }
+  .chip.fav { background:var(--hi); color:var(--fg); }
+  .chip button { border:0; background:none; padding:0 0 0 2px; line-height:1; color:var(--mut); }
+  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--mut); margin:18px 0 6px; }
+  .album { display:grid; grid-template-columns:22px 1fr; gap:2px 8px; padding:7px 4px; border-bottom:1px solid var(--line); }
+  .album:last-child { border-bottom:0; }
+  .album input { margin-top:3px; }
+  .album .t b { font-weight:600; }
+  .album .tags { display:flex; flex-wrap:wrap; gap:4px; margin-top:3px; }
+  .match { grid-column:2; font-size:13px; margin-top:2px; }
+  .ok { color:var(--acc); } .check { color:var(--warn); } .none { color:var(--bad); }
+  a { color:var(--acc); }
+  #bar { position:fixed; left:0; right:0; bottom:0; background:var(--card); border-top:1px solid var(--line); padding:10px 16px; }
+  #bar .in { max-width:900px; margin:0 auto; display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  #bar .grow { flex:1; min-width:140px; }
+  #log { white-space:pre-wrap; font:12px/1.4 ui-monospace,Menlo,monospace; color:var(--mut); max-height:180px; overflow:auto; }
+  .hidden { display:none !important; }
+</style>
+</head>
+<body>
+<header>
+  <h1>New albums</h1>
+  <div class="row">
+    <select id="week" aria-label="Week"></select>
+    <span id="auth" class="mut"></span>
+    <button id="btnLogin">Connect Spotify</button>
+  </div>
+</header>
+
+<main>
+  <section class="card" id="setup">
+    <div class="row">
+      <label class="small" for="clientId">Spotify Client ID</label>
+      <input type="text" id="clientId" size="34" placeholder="from developer.spotify.com dashboard" autocomplete="off">
+      <button id="saveClient">Save</button>
+    </div>
+    <div class="mut" style="margin-top:6px">Redirect URI to register in the Spotify app: <code id="redir"></code></div>
+  </section>
+
+  <section class="card">
+    <div class="row">
+      <label class="small" for="favInput">Favourite tags (preselect only)</label>
+      <input type="text" id="favInput" list="tagList" placeholder="e.g. metal, indie, hip hop" size="24">
+      <button id="addFav">Add</button>
+      <datalist id="tagList"></datalist>
+    </div>
+    <div class="row" id="favChips" style="margin-top:8px"></div>
+    <div class="mut" style="margin-top:6px">A tag matches if it contains the favourite ("metal" matches "industrial metal"). Albums without a genre tag are never preselected.</div>
+  </section>
+
+  <section class="card">
+    <div class="row">
+      <input type="text" id="filter" placeholder="Filter artist / title / tag" size="26">
+      <label class="small"><input type="checkbox" id="showEp" checked> EP</label>
+      <label class="small"><input type="checkbox" id="showRe" checked> reissues</label>
+      <button id="btnPre">Preselect by tags</button>
+      <button id="btnClear">Clear</button>
+      <button id="btnVis">Tick visible</button>
+    </div>
+    <div class="mut" id="meta" style="margin-top:6px"></div>
+  </section>
+
+  <div id="list"></div>
+
+  <section class="card">
+    <div class="mut">Log</div>
+    <div id="log"></div>
+  </section>
+</main>
+
+<div id="bar">
+  <div class="in">
+    <span id="count" class="mut"></span>
+    <input type="text" id="plName" class="grow" aria-label="Playlist name">
+    <button id="btnMatch" disabled>1. Find on Spotify</button>
+    <button id="btnCreate" class="primary" disabled>2. Create playlist</button>
+  </div>
+</div>
+
+<script>
+"use strict";
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
+const ls = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+};
+const log = (m) => { const el = $("log"); el.textContent += m + "\n"; el.scrollTop = el.scrollHeight; };
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+const REDIRECT = location.origin + location.pathname;
+const SCOPES = "playlist-modify-private";
+const API = "https://api.spotify.com/v1";
+
+let state = { weekFile: null, week: null, albums: [], sel: new Set(), fav: ls.get("na.fav", []), matches: {} };
+
+/* ---------- data ---------- */
+async function init() {
+  $("redir").textContent = REDIRECT;
+  $("clientId").value = ls.get("na.clientId", "");
+  await handleCallback();
+  renderAuth();
+  renderFav();
+  try {
+    const idx = await (await fetch("data/index.json", { cache: "no-store" })).json();
+    $("week").innerHTML = idx.weeks.map((w) => `<option>${esc(w)}</option>`).join("");
+    try {
+      const tags = await (await fetch("data/tags.json", { cache: "no-store" })).json();
+      $("tagList").innerHTML = Object.keys(tags).map((t) => `<option value="${esc(t)}">`).join("");
+    } catch {}
+    if (idx.weeks.length) await loadWeek(idx.weeks[0]);
+    else $("meta").textContent = "No data yet. Run the weekly workflow once.";
+  } catch (e) {
+    $("meta").textContent = "Cannot load data/index.json (run the workflow first). " + e;
+  }
+}
+
+async function loadWeek(file) {
+  state.weekFile = file;
+  state.matches = {};
+  const d = await (await fetch("data/archive/" + file, { cache: "no-store" })).json();
+  state.week = d;
+  state.albums = d.albums;
+  const saved = ls.get("na.sel." + file, null);
+  state.sel = new Set(saved ?? preselected());
+  $("plName").value = `New albums ${d.year}-W${String(d.week).padStart(2, "0")}`;
+  render();
+}
+
+function favMatch(a) {
+  return a.tags.some((t) => state.fav.some((f) => t.includes(f) || f.includes(t)));
+}
+const preselected = () => state.albums.filter(favMatch).map((a) => a.id);
+const saveSel = () => ls.set("na.sel." + state.weekFile, [...state.sel]);
+
+/* ---------- rendering ---------- */
+const KIND_LABEL = { main: "With genre (article highlights)", short: "In brief", also: "Also released", ep: "EP", reissue: "Reissues" };
+
+function visible(a) {
+  if (a.kind === "ep" && !$("showEp").checked) return false;
+  if (a.kind === "reissue" && !$("showRe").checked) return false;
+  const q = $("filter").value.trim().toLowerCase();
+  if (!q) return true;
+  return (a.artist + " " + a.title + " " + a.tags.join(" ")).toLowerCase().includes(q);
+}
+
+function render() {
+  const groups = {};
+  for (const a of state.albums) if (visible(a)) (groups[a.kind] ||= []).push(a);
+  let html = "";
+  for (const k of Object.keys(KIND_LABEL)) {
+    if (!groups[k]) continue;
+    html += `<h2>${KIND_LABEL[k]} (${groups[k].length})</h2><section class="card">`;
+    for (const a of groups[k]) {
+      const m = state.matches[a.id];
+      const tags = a.tags.map((t) => `<span class="chip ${state.fav.some((f) => t.includes(f) || f.includes(t)) ? "fav" : ""}">${esc(t)}</span>`).join("");
+      html += `<div class="album" data-id="${esc(a.id)}">
+        <input type="checkbox" ${state.sel.has(a.id) ? "checked" : ""} aria-label="Select ${esc(a.title)}">
+        <div class="t"><b>${esc(a.artist)}</b> – ${esc(a.title)}<div class="tags">${tags}</div></div>
+        ${m ? matchHtml(a, m) : ""}
+      </div>`;
+    }
+    html += "</section>";
+  }
+  $("list").innerHTML = html || '<p class="mut">Nothing to show.</p>';
+  const w = state.week;
+  $("meta").textContent = w ? `Week ${w.week}/${w.year}, published ${w.published || "?"}, ${state.albums.length} albums. Source: ${w.source_url}` : "";
+  updateBar();
+}
+
+function matchHtml(a, m) {
+  if (!m.best) return `<div class="match none">Not found on Spotify <button data-act="override">paste link</button></div>`;
+  const cls = m.status;
+  const label = { ok: "match", check: "check match", none: "weak match" }[m.status];
+  return `<div class="match ${cls}">
+    <label><input type="checkbox" data-act="inc" ${m.include ? "checked" : ""}> ${label} (${m.score.toFixed(2)}):
+    <a href="https://open.spotify.com/album/${esc(m.best.id)}" target="_blank" rel="noopener">${esc(m.best.name)}</a> – ${esc(m.best.artists.map((x) => x.name).join(", "))}
+    · ${m.best.total_tracks} tracks</label> <button data-act="override">other</button></div>`;
+}
+
+function updateBar() {
+  const n = state.sel.size;
+  const matched = Object.values(state.matches).filter((m) => m.best && m.include).length;
+  $("count").textContent = `${n} selected` + (Object.keys(state.matches).length ? ` · ${matched} ready` : "");
+  const authed = !!token();
+  $("btnMatch").disabled = !(authed && n);
+  $("btnCreate").disabled = !(authed && matched);
+}
+
+/* ---------- favourites ---------- */
+function renderFav() {
+  $("favChips").innerHTML = state.fav.map((f, i) => `<span class="chip fav">${esc(f)}<button data-i="${i}" aria-label="Remove">×</button></span>`).join("") || '<span class="mut">none yet</span>';
+}
+function addFav() {
+  const v = $("favInput").value.trim().toLowerCase();
+  if (v && !state.fav.includes(v)) { state.fav.push(v); ls.set("na.fav", state.fav); }
+  $("favInput").value = "";
+  renderFav(); render();
+}
+
+/* ---------- Spotify auth (Authorization Code + PKCE, no secret) ---------- */
+const b64url = (buf) => btoa(String.fromCharCode(...new Uint8Array(buf))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+const token = () => { const t = ls.get("na.tok", null); return t && t.refresh ? t : null; };
+
+async function login() {
+  const cid = ls.get("na.clientId", "");
+  if (!cid) { alert("Enter and save your Spotify Client ID first."); return; }
+  const verifier = b64url(crypto.getRandomValues(new Uint8Array(48)));
+  const challenge = b64url(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(verifier)));
+  const st = b64url(crypto.getRandomValues(new Uint8Array(12)));
+  sessionStorage.setItem("na.pkce", JSON.stringify({ verifier, st }));
+  const p = new URLSearchParams({ client_id: cid, response_type: "code", redirect_uri: REDIRECT, scope: SCOPES, code_challenge_method: "S256", code_challenge: challenge, state: st });
+  location.href = "https://accounts.spotify.com/authorize?" + p;
+}
+
+async function handleCallback() {
+  const q = new URLSearchParams(location.search);
+  if (!q.has("code") && !q.has("error")) return;
+  history.replaceState({}, "", REDIRECT);
+  if (q.has("error")) { log("Spotify auth error: " + q.get("error")); return; }
+  let saved; try { saved = JSON.parse(sessionStorage.getItem("na.pkce")); } catch {}
+  if (!saved || saved.st !== q.get("state")) { log("Auth state mismatch, try again."); return; }
+  await tokenRequest({ grant_type: "authorization_code", code: q.get("code"), redirect_uri: REDIRECT, code_verifier: saved.verifier });
+  sessionStorage.removeItem("na.pkce");
+}
+
+async function tokenRequest(params) {
+  const body = new URLSearchParams({ client_id: ls.get("na.clientId", ""), ...params });
+  const r = await fetch("https://accounts.spotify.com/api/token", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body });
+  const j = await r.json();
+  if (!r.ok) { log("Token error: " + JSON.stringify(j)); ls.set("na.tok", null); return false; }
+  const old = ls.get("na.tok", {});
+  ls.set("na.tok", { access: j.access_token, refresh: j.refresh_token || old.refresh, exp: Date.now() + (j.expires_in - 60) * 1000 });
+  return true;
+}
+
+async function accessToken() {
+  const t = token();
+  if (!t) throw new Error("Not connected to Spotify");
+  if (Date.now() < t.exp) return t.access;
+  if (!(await tokenRequest({ grant_type: "refresh_token", refresh_token: t.refresh }))) throw new Error("Session expired, connect again");
+  return ls.get("na.tok").access;
+}
+
+function renderAuth() {
+  $("auth").textContent = token() ? "Spotify: connected" : "Spotify: not connected";
+  $("btnLogin").textContent = token() ? "Reconnect" : "Connect Spotify";
+  $("setup").classList.toggle("hidden", !!token() && !!ls.get("na.clientId", ""));
+}
+
+async function api(method, path, body, tries = 0) {
+  const r = await fetch(path.startsWith("http") ? path : API + path, {
+    method,
+    headers: { Authorization: "Bearer " + (await accessToken()), ...(body ? { "Content-Type": "application/json" } : {}) },
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  if (r.status === 429 && tries < 5) { const w = (+r.headers.get("Retry-After") || 2) + 1; log(`rate limited, waiting ${w}s`); await sleep(w * 1000); return api(method, path, body, tries + 1); }
+  if (!r.ok) {
+    let detail = ""; try { detail = (await r.json()).error?.message || ""; } catch {}
+    const hint = r.status === 403 ? " (403: check Premium on the app owner, that your account is added under the app's users, and Development Mode limits)" : "";
+    throw new Error(`${method} ${path.split("?")[0]} -> ${r.status} ${detail}${hint}`);
+  }
+  return r.status === 204 ? null : r.json();
+}
+
+/* ---------- matching ---------- */
+const nrm = (s) => s.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, " ").trim();
+const stripParen = (s) => s.replace(/\s*[\(\[][^)\]]*[\)\]]/g, "").replace(/\s*[-–:]\s*[^-–:]*(remaster(ed)?|deluxe|anniversary|edition)\b.*$/i, "").trim();
+function lev(a, b) {
+  const m = a.length, n = b.length;
+  let prev = Array.from({ length: n + 1 }, (_, j) => j);
+  for (let i = 1; i <= m; i++) {
+    const cur = [i];
+    for (let j = 1; j <= n; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    prev = cur;
+  }
+  return prev[n];
+}
+function sim(a, b) {
+  a = nrm(a); b = nrm(b);
+  if (!a || !b) return 0;
+  if (a === b) return 1;
+  const A = new Set(a.split(" ")), B = new Set(b.split(" "));
+  const inter = [...A].filter((x) => B.has(x)).length;
+  const jac = inter / (A.size + B.size - inter);
+  const contain = inter / Math.min(A.size, B.size);
+  let chars = 1 - lev(a, b) / Math.max(a.length, b.length);
+  if (chars < 0.85) chars = 0; // only forgive typos / plurals, not merely similar titles
+  return Math.max(jac, 0.85 * contain * (a.includes(b) || b.includes(a) ? 1 : 0.7), chars);
+}
+const firstArtist = (s) => s.split(/\s*(?:,|&| and | feat\.? |\/)\s*/i)[0].trim();
+
+function score(a, c) {
+  const t = Math.max(sim(a.title, c.name), sim(stripParen(a.title), stripParen(c.name)));
+  const art = nrm(a.artist);
+  let ar = 0;
+  for (const x of c.artists) {
+    const n = nrm(x.name);
+    ar = Math.max(ar, sim(a.artist, x.name), art.includes(n) && n.length > 2 ? 0.9 : 0, sim(firstArtist(a.artist), x.name));
+  }
+  return Math.min(1, 0.55 * t + 0.45 * ar + (c.album_type === "album" ? 0.03 : 0));
+}
+
+async function searchAlbum(a) {
+  const queries = [
+    `album:"${stripQ(a.title)}" artist:"${stripQ(firstArtist(a.artist))}"`,
+    `${stripParen(a.title)} ${firstArtist(a.artist)}`,
+  ];
+  let best = null, bestScore = 0;
+  for (const q of queries) {
+    const j = await api("GET", `/search?type=album&limit=10&q=${encodeURIComponent(q)}`);
+    for (const c of j.albums?.items ?? []) {
+      const s = score(a, c);
+      if (s > bestScore) { best = c; bestScore = s; }
+    }
+    if (bestScore >= 0.9) break;
+  }
+  const status = bestScore >= 0.75 ? "ok" : bestScore >= 0.5 ? "check" : "none";
+  return { best: status === "none" && bestScore < 0.35 ? null : best, score: bestScore, status, include: status === "ok" };
+}
+const stripQ = (s) => s.replace(/["']/g, " ");
+
+async function matchSelected() {
+  $("btnMatch").disabled = true;
+  const todo = state.albums.filter((a) => state.sel.has(a.id));
+  log(`Searching ${todo.length} albums...`);
+  state.matches = {};
+  let i = 0;
+  for (const a of todo) {
+    i++;
+    try { state.matches[a.id] = await searchAlbum(a); }
+    catch (e) { log("ERR " + e.message); if (/401|403|expired|connected/.test(e.message)) break; state.matches[a.id] = { best: null, score: 0, status: "none", include: false }; }
+    if (i % 10 === 0) { render(); }
+    await sleep(120);
+  }
+  render();
+  const c = Object.values(state.matches);
+  log(`Done: ${c.filter((m) => m.status === "ok").length} ok, ${c.filter((m) => m.status === "check").length} to check, ${c.filter((m) => !m.best).length} not found. Review below, then create the playlist.`);
+}
+
+async function override(id) {
+  const v = prompt("Paste a Spotify album link or ID:");
+  if (!v) return;
+  const m = v.match(/album[/:]([A-Za-z0-9]{22})/) || v.match(/^([A-Za-z0-9]{22})$/);
+  if (!m) { alert("Not a Spotify album link."); return; }
+  try {
+    const c = await api("GET", "/albums/" + m[1]);
+    state.matches[id] = { best: c, score: 1, status: "ok", include: true };
+    render();
+  } catch (e) { log("ERR " + e.message); }
+}
+
+/* ---------- playlist ---------- */
+async function albumTrackUris(id) {
+  const uris = [];
+  let url = `/albums/${id}/tracks?limit=50`;
+  while (url) {
+    const j = await api("GET", url);
+    for (const t of j.items) uris.push(t.uri);
+    url = j.next;
+    if (url) await sleep(80);
+  }
+  return uris;
+}
+
+async function createPlaylist() {
+  $("btnCreate").disabled = true;
+  const chosen = state.albums.filter((a) => state.matches[a.id]?.best && state.matches[a.id].include);
+  if (!chosen.length) return;
+  try {
+    const name = $("plName").value.trim() || "New albums";
+    const w = state.week;
+    const pl = await api("POST", "/me/playlists", { name, public: false, description: `musicserver.cz Nové desky ${w.week}/${w.year}, ${chosen.length} albums` });
+    log(`Created playlist "${name}"`);
+    const seen = new Set(); const all = [];
+    for (const a of chosen) {
+      const uris = await albumTrackUris(state.matches[a.id].best.id);
+      for (const u of uris) if (!seen.has(u)) { seen.add(u); all.push(u); }
+      log(`+ ${a.artist} – ${a.title}: ${uris.length} tracks`);
+      await sleep(80);
+    }
+    for (let i = 0; i < all.length; i += 100) {
+      await api("POST", `/playlists/${pl.id}/items`, { uris: all.slice(i, i + 100) });
+      await sleep(150);
+    }
+    log(`Done: ${all.length} tracks in ${chosen.length} albums.`);
+    const link = pl.external_urls?.spotify || "https://open.spotify.com/playlist/" + pl.id;
+    $("log").insertAdjacentHTML("beforeend", `<a href="${esc(link)}" target="_blank" rel="noopener">Open playlist in Spotify</a>\n`);
+  } catch (e) {
+    log("ERR " + e.message);
+  } finally { updateBar(); }
+}
+
+/* ---------- events ---------- */
+$("week").addEventListener("change", (e) => loadWeek(e.target.value));
+$("saveClient").addEventListener("click", () => { ls.set("na.clientId", $("clientId").value.trim()); log("Client ID saved."); renderAuth(); });
+$("btnLogin").addEventListener("click", login);
+$("addFav").addEventListener("click", addFav);
+$("favInput").addEventListener("keydown", (e) => { if (e.key === "Enter") addFav(); });
+$("favChips").addEventListener("click", (e) => { const i = e.target.dataset.i; if (i === undefined) return; state.fav.splice(+i, 1); ls.set("na.fav", state.fav); renderFav(); render(); });
+$("filter").addEventListener("input", render);
+$("showEp").addEventListener("change", render);
+$("showRe").addEventListener("change", render);
+$("btnPre").addEventListener("click", () => { state.sel = new Set(preselected()); saveSel(); render(); });
+$("btnClear").addEventListener("click", () => { state.sel.clear(); saveSel(); render(); });
+$("btnVis").addEventListener("click", () => { state.albums.filter(visible).forEach((a) => state.sel.add(a.id)); saveSel(); render(); });
+$("btnMatch").addEventListener("click", matchSelected);
+$("btnCreate").addEventListener("click", createPlaylist);
+$("list").addEventListener("click", (e) => {
+  const row = e.target.closest(".album"); if (!row) return;
+  const id = row.dataset.id;
+  if (e.target.dataset.act === "override") return override(id);
+  if (e.target.dataset.act === "inc") { state.matches[id].include = e.target.checked; return updateBar(); }
+  if (e.target.matches('input[type=checkbox]') && !e.target.dataset.act) {
+    e.target.checked ? state.sel.add(id) : state.sel.delete(id);
+    saveSel(); updateBar();
+  }
+});
+
+init();
+</script>
+</body>
+</html>

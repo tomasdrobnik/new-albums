@@ -1,0 +1,48 @@
+name: weekly-new-albums
+
+on:
+  schedule:
+    # musicserver.cz published week 38-42 on Wednesdays between 13:00 and 15:00 (local time).
+    # Run Wed afternoon plus two fallbacks; the script skips weeks already stored.
+    - cron: "30 15 * * 3"
+    - cron: "30 6 * * 4"
+    - cron: "30 6 * * 5"
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "Article URL (optional, default = newest)"
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install beautifulsoup4
+      - run: python tests/test_parse.py
+      - name: Scrape
+        env:
+          ARTICLE_URL: ${{ github.event.inputs.url }}
+        run: |
+          if [ -n "$ARTICLE_URL" ]; then
+            python scraper/scrape.py --url "$ARTICLE_URL"
+          else
+            python scraper/scrape.py
+          fi
+      - name: Commit new data
+        run: |
+          git config user.name "new-albums-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data
+          if git diff --cached --quiet; then
+            echo "nothing new"
+          else
+            git commit -m "data: new albums week $(date +%G-%V)"
+            git push
+          fi

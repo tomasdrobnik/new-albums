@@ -1,0 +1,832 @@
+{
+ "week": 42,
+ "year": 2026,
+ "source_url": "https://musicserver.cz/clanek/80064/nove-desky-42-2026-od-johna-legenda-pres-vesnu-po-tonyho-iommiho/",
+ "published": "2026-10-28",
+ "release_note": "V pátek 23. října vyšly tyto nové tituly:",
+ "fetched_at": "2026-11-03T09:02:07+00:00",
+ "albums": [
+  {
+   "id": "john-legend__muse",
+   "artist": "John Legend",
+   "title": "Muse",
+   "kind": "main",
+   "tags": [
+    "funk soul",
+    "r'n'b",
+    "neo soul"
+   ],
+   "tags_raw": "funk soul / r'n'b / neo soul"
+  },
+  {
+   "id": "vesna__lidova",
+   "artist": "Vesna",
+   "title": "LIDOVÁ",
+   "kind": "main",
+   "tags": [
+    "folk-pop",
+    "world music",
+    "electropop"
+   ],
+   "tags_raw": "folk-pop / world music / elektronický pop"
+  },
+  {
+   "id": "tony-iommi__from-the-dark",
+   "artist": "Tony Iommi",
+   "title": "From The Dark",
+   "kind": "main",
+   "tags": [
+    "hard rock",
+    "heavy metal"
+   ],
+   "tags_raw": "hard rock / heavy metal"
+  },
+  {
+   "id": "michael-kiwanuka__fudge",
+   "artist": "Michael Kiwanuka",
+   "title": "Fudge",
+   "kind": "main",
+   "tags": [
+    "psychedelic soul"
+   ],
+   "tags_raw": "psychedelický soul"
+  },
+  {
+   "id": "ryan-hemsworth__numbskull",
+   "artist": "Ryan Hemsworth",
+   "title": "Numbskull",
+   "kind": "main",
+   "tags": [
+    "lo-fi",
+    "indie rock",
+    "dance",
+    "electronic"
+   ],
+   "tags_raw": "lo-fi / indie rock / taneční hudba / elektronika"
+  },
+  {
+   "id": "jana-vebrova-petr-tichy__om-z-lodky-odplouvani",
+   "artist": "Jana Vébrová & Petr Tichý",
+   "title": "Óm z loďky odplouvání",
+   "kind": "main",
+   "tags": [
+    "alternative folk"
+   ],
+   "tags_raw": "alternativní folk"
+  },
+  {
+   "id": "manic-street-preachers__the-holy-bible-live",
+   "artist": "Manic Street Preachers",
+   "title": "The Holy Bible Live",
+   "kind": "main",
+   "tags": [
+    "alternative rock",
+    "post-punk"
+   ],
+   "tags_raw": "alternativní rock / post-punk"
+  },
+  {
+   "id": "bernie-taupin__the-sea-has-no-mercy",
+   "artist": "Bernie Taupin",
+   "title": "The Sea Has No Mercy",
+   "kind": "main",
+   "tags": [
+    "folk",
+    "americana"
+   ],
+   "tags_raw": "folk / americana"
+  },
+  {
+   "id": "brothers-osborne__watertown",
+   "artist": "Brothers Osborne",
+   "title": "Watertown",
+   "kind": "main",
+   "tags": [
+    "country"
+   ],
+   "tags_raw": "country"
+  },
+  {
+   "id": "stand-atlantic__godbreath",
+   "artist": "Stand Atlantic",
+   "title": "Godbreath",
+   "kind": "main",
+   "tags": [
+    "pop-punk"
+   ],
+   "tags_raw": "pop-punk"
+  },
+  {
+   "id": "the-doors__unbound-and-dangerous",
+   "artist": "The Doors",
+   "title": "Unbound And Dangerous",
+   "kind": "main",
+   "tags": [
+    "classic rock",
+    "psychedelic rock"
+   ],
+   "tags_raw": "klasický rock / psychedelický rock"
+  },
+  {
+   "id": "the-flower-kings__hope",
+   "artist": "The Flower Kings",
+   "title": "Hope",
+   "kind": "main",
+   "tags": [
+    "progressive rock"
+   ],
+   "tags_raw": "progresivní rock"
+  },
+  {
+   "id": "iggy-mayerov__last-car-running",
+   "artist": "Iggy Mayerov",
+   "title": "Last Car Running",
+   "kind": "main",
+   "tags": [
+    "indie pop",
+    "synthpop",
+    "alternative pop"
+   ],
+   "tags_raw": "indie pop / synthpop / alternativní pop"
+  },
+  {
+   "id": "polyphia__be-not-afraid",
+   "artist": "Polyphia",
+   "title": "Be Not Afraid",
+   "kind": "main",
+   "tags": [
+    "instrumental progressive rock",
+    "math rock"
+   ],
+   "tags_raw": "instrumentální progresivní rock / math rock"
+  },
+  {
+   "id": "james-brandon-lewis__calling-antonin",
+   "artist": "James Brandon Lewis",
+   "title": "Calling Antonín",
+   "kind": "main",
+   "tags": [
+    "jazz"
+   ],
+   "tags_raw": "jazz"
+  },
+  {
+   "id": "yung-miami__watch-dis",
+   "artist": "Yung Miami",
+   "title": "Watch Dis",
+   "kind": "main",
+   "tags": [
+    "hip hop"
+   ],
+   "tags_raw": "hip hop"
+  },
+  {
+   "id": "anderson-paak-cordae__heavy-is-the-crown",
+   "artist": "Anderson .Paak, Cordae",
+   "title": "Heavy Is The Crown",
+   "kind": "main",
+   "tags": [
+    "hip hop"
+   ],
+   "tags_raw": "hip hop"
+  },
+  {
+   "id": "the-olivia-tremor-control__the-same-place",
+   "artist": "The Olivia Tremor Control",
+   "title": "The Same Place",
+   "kind": "main",
+   "tags": [
+    "neo-psychedelia"
+   ],
+   "tags_raw": "neopsychedelie"
+  },
+  {
+   "id": "forbidden__forbidden",
+   "artist": "Forbidden",
+   "title": "Forbidden",
+   "kind": "main",
+   "tags": [
+    "thrash metal"
+   ],
+   "tags_raw": "thrash metal"
+  },
+  {
+   "id": "mental-cruelty__echoes-of-a-forlorn-land",
+   "artist": "Mental Cruelty",
+   "title": "Echoes Of A Forlorn Land",
+   "kind": "main",
+   "tags": [
+    "death metal"
+   ],
+   "tags_raw": "moderní death metal"
+  },
+  {
+   "id": "above-beyond__anjunabeats-volume-17",
+   "artist": "Above & Beyond",
+   "title": "Anjunabeats Volume 17",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "amy-winehouse__back-to-black-20th-anniversary",
+   "artist": "Amy Winehouse",
+   "title": "Back To Black - 20th Anniversary",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "aurat__silhouette",
+   "artist": "Aurat",
+   "title": "Silhouette",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "axis-sova__flowerage",
+   "artist": "Axis: Sova",
+   "title": "Flowerage",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "bally-baby__the-last-sipper",
+   "artist": "Bally Baby",
+   "title": "The Last Sipper",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "bill-nace-mike-polizze__live-at-pageant-soloveev",
+   "artist": "Bill Nace & Mike Polizze",
+   "title": "Live At Pageant : Soloveev",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "bruce-dickinson__accident-of-birth-2026-mix",
+   "artist": "Bruce Dickinson",
+   "title": "Accident Of Birth (2026 Mix)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "claud__me-and-the-music",
+   "artist": "Claud",
+   "title": "Me And The Music",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "comet__autopsy-of-me",
+   "artist": "Comet",
+   "title": "Autopsy Of Me",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "cyrille-dubois__benjamin-britten-en-francais",
+   "artist": "Cyrille Dubois",
+   "title": "Benjamin Britten: En Francais!",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "dazy__maximumblastsuperloud-vol-2-24-songs-from-2023-2026",
+   "artist": "Dazy",
+   "title": "Maximumblastsuperloud Vol. 2: 24 Songs From 2023-2026",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "de-la-soul__stakes-is-high-30th-anniversary-edition",
+   "artist": "De La Soul",
+   "title": "Stakes Is High (30th Anniversary Edition)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "dis-fig__what-to-make-of-these-mortal-hands",
+   "artist": "Dis Fig",
+   "title": "What To Make Of These Mortal Hands",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "dj-suzy__kira-krash",
+   "artist": "DJ Suzy",
+   "title": "Kira Krash",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "ecce-shnak__dandy-variances",
+   "artist": "Ecce Shnak",
+   "title": "Dandy Variances",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "edward-gardner__bela-bartok-the-miraculous-mandarin-suite-the-wooden-prince",
+   "artist": "Edward Gardner",
+   "title": "Béla Bartók : The Miraculous Mandarin Suite, The Wooden Prince",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "ellise__bedroom-confessional-xtras",
+   "artist": "Ellise",
+   "title": "Bedroom Confessional (Xtras)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "fake-names__punk-ruins",
+   "artist": "Fake Names",
+   "title": "Punk Ruins",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "fine__jazz-dreams",
+   "artist": "Fine",
+   "title": "Jazz Dreams",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "foot-ox__topanga-canyon",
+   "artist": "Foot Ox",
+   "title": "Topanga Canyon",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "frank-sinatra__sinatra-at-the-sands",
+   "artist": "Frank Sinatra",
+   "title": "Sinatra At The Sands",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "gdp__cross-off-matthew",
+   "artist": "Gdp",
+   "title": "Cross Off Matthew",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "glasswaves__while",
+   "artist": "Glasswaves",
+   "title": "While",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "grumpy__unfindable-ring",
+   "artist": "Grumpy",
+   "title": "Unfindable Ring",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "hawkwind__friends-relations-vol-6",
+   "artist": "Hawkwind",
+   "title": "Friends & Relations Vol. 6",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "hot-freaks__soft-body",
+   "artist": "Hot Freaks",
+   "title": "Soft Body",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "ignea__monumental",
+   "artist": "Ignea",
+   "title": "Monumental",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "igor-levit__l-van-beethoven-a-schoenberg-resistance",
+   "artist": "Igor Levit",
+   "title": "L. Van Beethoven / A. Schoenberg : Resistance",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "jeffrey-silverstein__doggone",
+   "artist": "Jeffrey Silverstein",
+   "title": "Doggone",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "jimmy-webb__yours-for-the-taking-the-found-songs-of-jimmy-webb",
+   "artist": "Jimmy Webb",
+   "title": "Yours For The Taking: The Found Songs Of Jimmy Webb",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "joeyy__fade-into-obscurity",
+   "artist": "Joeyy",
+   "title": "Fade Into Obscurity",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "jonah-kagen__eternity-of-anything",
+   "artist": "Jonah Kagen",
+   "title": "Eternity Of Anything",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "josh-johnson__animative",
+   "artist": "Josh Johnson",
+   "title": "Animative",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "lamplight__lick-the-spoon-let-it-soften",
+   "artist": "Lamplight",
+   "title": "Lick The Spoon Let It Soften",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "like-roses__after-it-ends",
+   "artist": "Like Roses",
+   "title": "After It Ends",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "michael-nau__popfly",
+   "artist": "Michael Nau",
+   "title": "Popfly",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "mike-reed-s-separatist-party__sing-the-color-blue",
+   "artist": "Mike Reed’s Separatist Party",
+   "title": "Sing The Color Blue",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "oleka__human-error",
+   "artist": "Oleka",
+   "title": "Human Error",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "penelope-road__maybe-in-time",
+   "artist": "Penelope Road",
+   "title": "Maybe In Time",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "pet-fox__balance",
+   "artist": "Pet Fox",
+   "title": "Balance",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "porcelain__today-s-minor-victories",
+   "artist": "Porcelain",
+   "title": "Today’s Minor Victories",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "queen-of-jeans__hard-sweet",
+   "artist": "Queen Of Jeans",
+   "title": "Hard/Sweet",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "raffi__love-is-everywhere",
+   "artist": "Raffi",
+   "title": "Love Is Everywhere",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "rayland-baxter__true-violet",
+   "artist": "Rayland Baxter",
+   "title": "True Violet",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "rickshaw-billie-s-burger-patrol__ca-h-grab",
+   "artist": "Rickshaw Billie’s Burger Patrol",
+   "title": "Ca$h Grab",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "savak__door-deals-and-debt-an-essential-collection-from-the-first-10-years",
+   "artist": "Savak",
+   "title": "Door Deals And Debt: An Essential Collection From The First 10 Years",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "sen-morimoto__time-is-on-your-side",
+   "artist": "Sen Morimoto",
+   "title": "Time Is On Your Side",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "small-pond__soft-burn",
+   "artist": "Small Pond",
+   "title": "Soft Burn",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "sour-widows__sigil",
+   "artist": "Sour Widows",
+   "title": "Sigil",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "surf7__whoville",
+   "artist": "Surf7",
+   "title": "Whoville",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "surprise-chief__frogs-in-a-pond",
+   "artist": "Surprise Chief",
+   "title": "Frogs In A Pond",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "swervedriver__raise-demos",
+   "artist": "Swervedriver",
+   "title": "Raise: Demos",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "the-cat-s-miaow__when-you-smiled-and-turned-away",
+   "artist": "The Cat’s Miaow",
+   "title": "When You Smiled And Turned Away",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "the-connells__darker-days-40th-anniversary",
+   "artist": "The Connells",
+   "title": "Darker Days (40th Anniversary)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "the-doors__unbound-and-dangerous-bluray",
+   "artist": "The Doors",
+   "title": "Unbound And Dangerous (BluRay)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "the-hails__duckpond",
+   "artist": "The Hails",
+   "title": "Duckpond",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "the-nerves__the-nerves",
+   "artist": "The Nerves",
+   "title": "The Nerves",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "toosi__platinum-heart-2",
+   "artist": "Toosi",
+   "title": "Platinum Heart 2",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "total-tommy__trapezoid",
+   "artist": "Total Tommy",
+   "title": "Trapezoid",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "triada__exuvia",
+   "artist": "Tríada",
+   "title": "Exuvia",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "vrsty__icon",
+   "artist": "Vrsty",
+   "title": "Icon",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "dj-python__to-accomplish-many-things",
+   "artist": "DJ Python",
+   "title": "To Accomplish Many Things",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "isabel-dumaa__reverie",
+   "artist": "Isabel Dumaa",
+   "title": "Reverie",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "marfa__we-ll-all-be-okay",
+   "artist": "Marfa",
+   "title": "We’ll All Be Okay",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "niis__play-niis",
+   "artist": "Niis",
+   "title": "Play Niis",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "ales-brichta__ruze-pro-algernon-remastered-2026-supraphon",
+   "artist": "Aleš Brichta",
+   "title": "Růže pro Algernon (Remastered 2026) (Supraphon)",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "brand-new-heavies__forward",
+   "artist": "Brand New Heavies",
+   "title": "Forward",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "brand-new-heavies__get-used-to-it",
+   "artist": "Brand New Heavies",
+   "title": "Get Used To It",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "de-la-soul__stakes-is-high",
+   "artist": "De La Soul",
+   "title": "Stakes Is High",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "kim-carnes__mistaken-identity",
+   "artist": "Kim Carnes",
+   "title": "Mistaken Identity",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "lp__lost-on-you",
+   "artist": "LP",
+   "title": "Lost On You",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "my-chemical-romance__the-black-parade",
+   "artist": "My Chemical Romance",
+   "title": "The Black Parade",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "scott-weiland__live",
+   "artist": "Scott Weiland",
+   "title": "Live",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "the-traveling-wilburys__the-traveling-wilburys-vol-1-remaster-2016",
+   "artist": "The Traveling Wilburys",
+   "title": "The Traveling Wilburys Vol. 1 (Remaster 2016)",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "the-traveling-wilburys__the-traveling-wilburys-vol-3-remaster-2016",
+   "artist": "The Traveling Wilburys",
+   "title": "The Traveling Wilburys Vol. 3 (Remaster 2016)",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "van-halen__a-different-kind-of-truth",
+   "artist": "Van Halen",
+   "title": "A Different Kind Of Truth",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  }
+ ]
+}
