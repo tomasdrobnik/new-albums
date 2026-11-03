@@ -23,6 +23,8 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    env:
+      HAS_SMTP: ${{ secrets.SMTP_USER != '' && secrets.SMTP_PASS != '' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -60,19 +62,27 @@ jobs:
             git push
           fi
           echo "file=$new" >> "$GITHUB_OUTPUT"
-      - name: Notify (issue -> GitHub emails the repo owner)
-        if: ${{ steps.commit.outputs.file != '' }}
+      - name: Notify by email (SMTP secrets set)
+        if: ${{ steps.commit.outputs.file != '' && env.HAS_SMTP == 'true' }}
+        env:
+          FILE: ${{ steps.commit.outputs.file }}
+          PAGE: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          NOTIFY_TO: ${{ secrets.NOTIFY_TO }}
+        run: python scraper/notify.py email "$FILE" "$PAGE"
+      - name: Notify by GitHub issue (fallback, no SMTP secrets)
+        if: ${{ steps.commit.outputs.file != '' && env.HAS_SMTP != 'true' }}
         env:
           GH_TOKEN: ${{ github.token }}
           FILE: ${{ steps.commit.outputs.file }}
           PAGE: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
-          OWNER: ${{ github.repository_owner }}
         run: |
-          python scraper/notify_body.py "$FILE" "$PAGE" "@$OWNER" > body.md
+          python scraper/notify.py issue "$FILE" "$PAGE" > body.md
           title=$(head -1 body.md); tail -n +2 body.md > issue.md
           gh label create new-week --color 1a7f4b --description "Weekly new albums notification" 2>/dev/null || true
-          # close last week's notification so only the current one stays open
           for n in $(gh issue list --label new-week --state open --json number -q '.[].number'); do
             gh issue close "$n" --comment "Superseded by a newer week."
           done
-          gh issue create --title "$title" --body-file issue.md --label new-week --assignee "$OWNER"
+          gh issue create --title "$title" --body-file issue.md --label new-week
