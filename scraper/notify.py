@@ -82,11 +82,20 @@ def main():
     msg.set_content(text_body(d, link, kinds, main_))
     msg.add_alternative(html_body(d, link, kinds, main_), subtype="html")
     host, port = os.environ.get("SMTP_HOST") or "smtp.mail.me.com", int(os.environ.get("SMTP_PORT") or 587)
-    with smtplib.SMTP(host, port, timeout=30) as s:
-        s.starttls()
-        s.login(user, pw)
-        s.send_message(msg)
-    print("sent:", msg["Subject"], "->", msg["To"])
+    # iCloud accepts either the full address or only the part before "@" as username
+    logins = [user] + ([user.split("@")[0]] if "@" in user else [])
+    pw = pw.strip()
+    for i, login in enumerate(logins):
+        try:
+            with smtplib.SMTP(host, port, timeout=30) as s:
+                s.starttls()
+                s.login(login, pw)
+                s.send_message(msg)
+            print("sent:", msg["Subject"], "->", msg["To"], f"(login form {i + 1})")
+            return
+        except smtplib.SMTPAuthenticationError as e:
+            print(f"login form {i + 1} rejected: {e.smtp_code}", file=sys.stderr)
+    sys.exit(f"SMTP login failed (password length {len(pw)}; an Apple app-specific password is 19 chars incl. dashes)")
 
 
 if __name__ == "__main__":
