@@ -50,7 +50,7 @@ Weekly pipeline: musicserver.cz "Nové desky" article → JSON → static checkl
 
 ## History
 
-- 2026-11-03: Added live article text, collapsible sections, source links, issue-email notification
+- 2026-11-03: Added live article text, collapsible sections, source links, issue-email notification (test issue #1, email confirmed received)
 - 2026-11-03: Client ID built into page (was paste-per-browser; user saw "not connected" in own browser)
 - 2026-11-03: Repo created, Pages enabled, week 42 stored, Spotify linked, first playlist "New albums 2026-W42" (6 albums, 63 tracks) created; Action verified via manual run
 - 2026-11-03: Initial documentation
