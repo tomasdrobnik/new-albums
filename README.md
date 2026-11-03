@@ -10,7 +10,7 @@ Weekly flow: musicserver.cz "Nové desky" article → JSON (artist, title, genre
 
 1. Create a GitHub repo, push this folder, enable Pages: Settings → Pages → Branch `main`, folder `/docs`.
 2. Spotify Developer Dashboard → Create app → Web API. Redirect URI = the exact page URL shown at the top of the page (e.g. `https://<user>.github.io/<repo>/`). The app owner needs Spotify Premium.
-3. Open the page, paste the Client ID, Save, Connect Spotify.
+3. Set `DEFAULT_CLIENT_ID` in `docs/index.html` to your Client ID (or paste it on the page and Save), then Connect Spotify.
 4. Actions → weekly-new-albums → Run workflow (first run fills week data; paste an article URL to backfill).
 
 No client secret is used (PKCE). Token and favourite tags live in your browser's localStorage only.

@@ -115,13 +115,16 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const REDIRECT = location.origin + location.pathname;
 const SCOPES = "playlist-modify-private";
 const API = "https://api.spotify.com/v1";
+// Public Spotify app identifier (PKCE, no secret). A value saved in the page overrides it.
+const DEFAULT_CLIENT_ID = "bb96d763205c40848e69bdb0f4faa2dd";
+const clientId = () => ls.get("na.clientId", "") || DEFAULT_CLIENT_ID;
 
 let state = { weekFile: null, week: null, albums: [], sel: new Set(), fav: ls.get("na.fav", []), matches: {} };
 
 /* ---------- data ---------- */
 async function init() {
   $("redir").textContent = REDIRECT;
-  $("clientId").value = ls.get("na.clientId", "");
+  $("clientId").value = clientId();
   await handleCallback();
   renderAuth();
   renderFav();
@@ -227,7 +230,7 @@ const b64url = (buf) => btoa(String.fromCharCode(...new Uint8Array(buf))).replac
 const token = () => { const t = ls.get("na.tok", null); return t && t.refresh ? t : null; };
 
 async function login() {
-  const cid = ls.get("na.clientId", "");
+  const cid = clientId();
   if (!cid) { alert("Enter and save your Spotify Client ID first."); return; }
   const verifier = b64url(crypto.getRandomValues(new Uint8Array(48)));
   const challenge = b64url(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(verifier)));
@@ -249,7 +252,7 @@ async function handleCallback() {
 }
 
 async function tokenRequest(params) {
-  const body = new URLSearchParams({ client_id: ls.get("na.clientId", ""), ...params });
+  const body = new URLSearchParams({ client_id: clientId(), ...params });
   const r = await fetch("https://accounts.spotify.com/api/token", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body });
   const j = await r.json();
   if (!r.ok) { log("Token error: " + JSON.stringify(j)); ls.set("na.tok", null); return false; }
@@ -269,7 +272,7 @@ async function accessToken() {
 function renderAuth() {
   $("auth").textContent = token() ? "Spotify: connected" : "Spotify: not connected";
   $("btnLogin").textContent = token() ? "Reconnect" : "Connect Spotify";
-  $("setup").classList.toggle("hidden", !!token() && !!ls.get("na.clientId", ""));
+  $("setup").classList.toggle("hidden", !!token() && !!clientId());
 }
 
 async function api(method, path, body, tries = 0) {

@@ -14,6 +14,7 @@ Weekly pipeline: musicserver.cz "Nové desky" article → JSON → static checkl
 - Page: https://tomasdrobnik.github.io/new-albums/ (Pages from `main` /docs)
 - Scraper `scraper/scrape.py` (Python + BeautifulSoup) writes `docs/data/archive/YYYY-wWW.json`, `index.json`, `tags.json`
 - GitHub Action `weekly.yml`: Wed 15:30 UTC + Thu/Fri 06:30 fallbacks; idempotent ("already stored"), commits only new data
+- Client ID built into `docs/index.html` (`DEFAULT_CLIENT_ID`), so each new browser needs only Connect + Agree
 - Page does Spotify auth with Authorization Code + PKCE in the browser; no client secret; token in localStorage
 
 ---
@@ -46,6 +47,7 @@ Weekly pipeline: musicserver.cz "Nové desky" article → JSON → static checkl
 
 ## History
 
+- 2026-11-03: Client ID built into page (was paste-per-browser; user saw "not connected" in own browser)
 - 2026-11-03: Repo created, Pages enabled, week 42 stored, Spotify linked, first playlist "New albums 2026-W42" (6 albums, 63 tracks) created; Action verified via manual run
 - 2026-11-03: Initial documentation
 
