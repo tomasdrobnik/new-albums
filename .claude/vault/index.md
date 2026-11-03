@@ -9,7 +9,7 @@
 
 | ID   | Topic | Status | Summary (15 words max) |
 |------|-------|--------|------------------------|
-| P001 | Architecture & Spotify setup | Active | Scraper, weekly Action, Pages checklist, PKCE Spotify app config, Dev Mode limits, gotchas |
+| P001 | Architecture & Spotify setup | Active | Scraper, Action, SMTP email, Pages checklist, Spotify PKCE config, local folder, gotchas |
 
 ---
 

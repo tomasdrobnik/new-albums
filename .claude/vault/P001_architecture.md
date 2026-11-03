@@ -11,6 +11,7 @@
 Weekly pipeline: musicserver.cz "Nové desky" article → JSON → static checklist page → private Spotify playlist with whole albums.
 
 - Repo: https://github.com/tomasdrobnik/new-albums (public, so GitHub Pages is free)
+- Local checkout: `~/GitHub/NewAlbum_robot` (folder name differs from repo name `new-albums`)
 - Page: https://tomasdrobnik.github.io/new-albums/ (Pages from `main` /docs)
 - Scraper `scraper/scrape.py` (Python + BeautifulSoup) writes `docs/data/archive/YYYY-wWW.json`, `index.json`, `tags.json`
 - GitHub Action `weekly.yml`: Wed 15:30 UTC + Thu/Fri 06:30 fallbacks; idempotent ("already stored"), commits only new data
@@ -29,7 +30,7 @@ Weekly pipeline: musicserver.cz "Nové desky" article → JSON → static checkl
 - Feb 2026 Dev Mode rules respected: search limit ≤10, `POST /me/playlists`, `POST /playlists/{id}/items`, `GET /albums/{id}` (no batch)
 - Owner needs Premium; max 5 users per app
 - Czech genre labels mapped to English in `TAG_MAP`; unknown labels pass through lowercased — extend map when new Czech tags appear in `tags.json`
-- Local: `python3 -m venv .venv && .venv/bin/pip install beautifulsoup4`; `.venv/bin/python tests/test_parse.py`; `scraper/scrape.py --dry-run`
+- Local (`.venv` is gitignored, recreate after cloning/moving): `python3 -m venv .venv && .venv/bin/pip install beautifulsoup4`; `.venv/bin/python tests/test_parse.py`; `scraper/scrape.py --dry-run`
 
 ---
 
@@ -53,6 +54,7 @@ Weekly pipeline: musicserver.cz "Nové desky" article → JSON → static checkl
 
 ## History
 
+- 2026-11-03: Local project moved from session scratch folder → `~/GitHub/NewAlbum_robot` (.git and .claude copied by hand; app copy skipped dot-folders)
 - 2026-11-03: SMTP email verified working (run 41619889844)
 - 2026-11-03: Notification switched from GitHub issue to SMTP email (issue link not direct); issue kept as fallback
 - 2026-11-03: Added live article text, collapsible sections, source links, issue-email notification (test issue #1, email confirmed received)
