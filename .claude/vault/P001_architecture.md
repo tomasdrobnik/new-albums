@@ -39,6 +39,8 @@ Weekly pipeline: musicserver.cz "Nové desky" article → JSON → static checkl
 - Week 42/2026 article had no "V krátkosti" section — parser handles missing sections
 - Article usually published Wednesday afternoon CET; week number in URL, not ISO week
 - GitHub issue emails link to the issue (`#event-…` for assignment), not the page — reason for switching to SMTP
+- SMTP 535 auth failures came from bad secret values (one SMTP_PASS saved empty; pasted values with whitespace) — notify.py strips password, tries full address then short username, logs password length; fixed 2026-11-03
+- Fallback issue runs when email step outcome == failure (step uses continue-on-error, so its conclusion still shows success)
 - Public CORS proxies tested 2026-11-03: corsproxy.io 401 (needs key), allorigins 408, codetabs/cors.lol/whateverorigin fail; only r.jina.ai works
 
 ---
@@ -51,6 +53,7 @@ Weekly pipeline: musicserver.cz "Nové desky" article → JSON → static checkl
 
 ## History
 
+- 2026-11-03: SMTP email verified working (run 41619889844)
 - 2026-11-03: Notification switched from GitHub issue to SMTP email (issue link not direct); issue kept as fallback
 - 2026-11-03: Added live article text, collapsible sections, source links, issue-email notification (test issue #1, email confirmed received)
 - 2026-11-03: Client ID built into page (was paste-per-browser; user saw "not connected" in own browser)
