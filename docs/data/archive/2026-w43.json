@@ -1,0 +1,834 @@
+{
+ "week": 43,
+ "year": 2026,
+ "source_url": "https://musicserver.cz/clanek/80114/nove-desky-43-2026-od-nickelback-pres-monkey-business-po-queens-of-the-stone-age/",
+ "published": "2026-11-04",
+ "release_note": "V pátek 30. října vyšly tyto nové tituly:",
+ "fetched_at": "2026-11-04T21:22:44+00:00",
+ "albums": [
+  {
+   "id": "nickelback__everything-under-the-sun",
+   "artist": "Nickelback",
+   "title": "Everything Under The Sun",
+   "kind": "main",
+   "tags": [
+    "post-grunge",
+    "hard rock"
+   ],
+   "tags_raw": "post-grunge / hard rock"
+  },
+  {
+   "id": "monkey-business__jinej-svet-neni-k-dispozici",
+   "artist": "Monkey Business",
+   "title": "Jinej svět není k dispozici",
+   "kind": "main",
+   "tags": [
+    "funk"
+   ],
+   "tags_raw": "funk"
+  },
+  {
+   "id": "queens-of-the-stone-age__perfecth",
+   "artist": "Queens Of The Stone Age",
+   "title": "Perfecth",
+   "kind": "main",
+   "tags": [
+    "alternative rock"
+   ],
+   "tags_raw": "alternativní rock"
+  },
+  {
+   "id": "insania__neo-noe",
+   "artist": "Insania",
+   "title": "Neo Noe",
+   "kind": "main",
+   "tags": [
+    "crossover",
+    "metal"
+   ],
+   "tags_raw": "crossover / metal"
+  },
+  {
+   "id": "martina-partlova__nikdy-nebylo-lip",
+   "artist": "Martina Pártlová",
+   "title": "Nikdy nebylo líp",
+   "kind": "main",
+   "tags": [
+    "pop",
+    "pop-rock"
+   ],
+   "tags_raw": "pop / pop-rock"
+  },
+  {
+   "id": "diiv__zirp",
+   "artist": "DIIV",
+   "title": "Zirp!",
+   "kind": "main",
+   "tags": [
+    "shoegaze",
+    "indie rock"
+   ],
+   "tags_raw": "shoegaze / indie rock"
+  },
+  {
+   "id": "franta-prachar__8-dni",
+   "artist": "Franta Prachař",
+   "title": "8 dní",
+   "kind": "main",
+   "tags": [
+    "indie pop",
+    "alternative pop",
+    "pop-rock"
+   ],
+   "tags_raw": "indie pop / alternativní pop / pop-rock"
+  },
+  {
+   "id": "editors__surface-echo-sound",
+   "artist": "Editors",
+   "title": "Surface Echo & Sound",
+   "kind": "main",
+   "tags": [
+    "indie rock",
+    "post-punk"
+   ],
+   "tags_raw": "indie rock / post-punk"
+  },
+  {
+   "id": "ministry__hate-to-go-take-out-or-delivery",
+   "artist": "Ministry",
+   "title": "Hate To Go (Take Out Or Delivery)",
+   "kind": "main",
+   "tags": [
+    "industrial metal"
+   ],
+   "tags_raw": "industriální metal"
+  },
+  {
+   "id": "sampa-the-great__nu-zamrock",
+   "artist": "Sampa The Great",
+   "title": "Nu Zamrock",
+   "kind": "main",
+   "tags": [
+    "hip hop"
+   ],
+   "tags_raw": "hip hop"
+  },
+  {
+   "id": "adam-plachetka-a-melody-makers__let-it-snow-swingove-vanoce",
+   "artist": "Adam Plachetka a Melody Makers",
+   "title": "Let It Snow! - Swingové Vánoce",
+   "kind": "main",
+   "tags": [
+    "vánoční hudba",
+    "swing"
+   ],
+   "tags_raw": "vánoční hudba / swing"
+  },
+  {
+   "id": "dominic-fike__how-to-quit-smoking",
+   "artist": "Dominic Fike",
+   "title": "How To Quit Smoking",
+   "kind": "main",
+   "tags": [
+    "indie pop",
+    "lo-fi",
+    "alternativní hip hop"
+   ],
+   "tags_raw": "indie pop / lo-fi / alternativní hip hop"
+  },
+  {
+   "id": "blind-channel__painstream",
+   "artist": "Blind Channel",
+   "title": "Painstream",
+   "kind": "main",
+   "tags": [
+    "violent pop",
+    "moderní metalcore"
+   ],
+   "tags_raw": "violent pop / moderní metalcore"
+  },
+  {
+   "id": "yello__time-lab",
+   "artist": "Yello",
+   "title": "Time Lab",
+   "kind": "main",
+   "tags": [
+    "synth pop",
+    "new wave",
+    "techno"
+   ],
+   "tags_raw": "synth pop / new wave / techno"
+  },
+  {
+   "id": "marie-rottrova__reka-lasky-to-nejlepsi",
+   "artist": "Marie Rottrová",
+   "title": "Řeka lásky / To nejlepší",
+   "kind": "main",
+   "tags": [
+    "pop",
+    "soul"
+   ],
+   "tags_raw": "pop / soul"
+  },
+  {
+   "id": "christian-mcbride-ursa-major__points-of-light",
+   "artist": "Christian McBride, Ursa Major",
+   "title": "Points Of Light",
+   "kind": "main",
+   "tags": [
+    "jazz"
+   ],
+   "tags_raw": "jazz"
+  },
+  {
+   "id": "floex-jan-sikl__directors",
+   "artist": "Floex & Jan Šikl",
+   "title": "Directors",
+   "kind": "main",
+   "tags": [
+    "současná vážná hudba"
+   ],
+   "tags_raw": "současná vážná hudba"
+  },
+  {
+   "id": "princess-goes__3",
+   "artist": "Princess Goes",
+   "title": "3",
+   "kind": "main",
+   "tags": [
+    "avantgardní synth-pop",
+    "indie rock"
+   ],
+   "tags_raw": "avantgardní synth-pop / indie rock"
+  },
+  {
+   "id": "marie-kieslowski__nikdy-predtim-mi-nebylo-lip",
+   "artist": "Marie Kieslowski",
+   "title": "Nikdy předtím mi nebylo líp",
+   "kind": "main",
+   "tags": [
+    "indie folk"
+   ],
+   "tags_raw": "indie folk"
+  },
+  {
+   "id": "queen__budapest",
+   "artist": "Queen",
+   "title": "Budapest",
+   "kind": "main",
+   "tags": [
+    "rock"
+   ],
+   "tags_raw": "rock"
+  },
+  {
+   "id": "the-church__lacuna",
+   "artist": "The Church",
+   "title": "Lacuna",
+   "kind": "main",
+   "tags": [
+    "neo-psychedelie",
+    "dream pop"
+   ],
+   "tags_raw": "neo-psychedelie/ dream pop"
+  },
+  {
+   "id": "tinashe__popstar",
+   "artist": "Tinashe",
+   "title": "Popstar",
+   "kind": "main",
+   "tags": [
+    "uk garage",
+    "hyperpop",
+    "jersey club"
+   ],
+   "tags_raw": "uk garage / hyperpop / jersey club"
+  },
+  {
+   "id": "against-the-current__till-death-back",
+   "artist": "Against The Current",
+   "title": "Till Death & Back",
+   "kind": "main",
+   "tags": [
+    "rock",
+    "pop rock"
+   ],
+   "tags_raw": "rock / pop rock"
+  },
+  {
+   "id": "heather-nova__the-orchard",
+   "artist": "Heather Nova",
+   "title": "The Orchard",
+   "kind": "main",
+   "tags": [
+    "folk",
+    "alternativní folk rock"
+   ],
+   "tags_raw": "folk / alternativní folk rock"
+  },
+  {
+   "id": "ida-the-young__seeing-in-reverse",
+   "artist": "Ida The Young",
+   "title": "Seeing In Reverse",
+   "kind": "main",
+   "tags": [
+    "alternativa",
+    "indie electro rock"
+   ],
+   "tags_raw": "alternativa / indie electro rock"
+  },
+  {
+   "id": "daddy-yankee__la-postal",
+   "artist": "Daddy Yankee",
+   "title": "La Postal",
+   "kind": "main",
+   "tags": [
+    "reggaeton",
+    "latin hip hop"
+   ],
+   "tags_raw": "reggaeton / latin hip hop"
+  },
+  {
+   "id": "enslaved__mi",
+   "artist": "Enslaved",
+   "title": "Mið",
+   "kind": "main",
+   "tags": [
+    "progresivní black metal"
+   ],
+   "tags_raw": "progresivní black metal"
+  },
+  {
+   "id": "mk__in-the-night-again",
+   "artist": "MK",
+   "title": "In The Night Again",
+   "kind": "main",
+   "tags": [
+    "house",
+    "deep house",
+    "taneční pop"
+   ],
+   "tags_raw": "house / deep house / taneční pop"
+  },
+  {
+   "id": "2nd-grade__girls-and-boys",
+   "artist": "2nd Grade",
+   "title": "Girls And Boys",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "ak-the-menace__rockout-2",
+   "artist": "AK The Menace",
+   "title": "Rockout 2",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "cold-war-kids__robbers-cowards-complete-cowards-20th-anniversary-edition",
+   "artist": "Cold War Kids",
+   "title": "Robbers & Cowards / Complete Cowards (20th Anniversary Edition)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "cove-grove__the-shadow",
+   "artist": "Cove Grove",
+   "title": "The Shadow",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "dire-straits__on-every-street-bluray",
+   "artist": "Dire Straits",
+   "title": "On Every Street (BluRay)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "disgusting-sisters__skin-blisters",
+   "artist": "Disgusting Sisters",
+   "title": "Skin & Blisters",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "eliza-edens__death-drive",
+   "artist": "Eliza Edens",
+   "title": "Death Drive",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "elke__big-mike",
+   "artist": "Elke",
+   "title": "Big Mike",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "felicia__popstar",
+   "artist": "Felicia",
+   "title": "Popstar",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "foreigner__head-games-super-deluxe-edition",
+   "artist": "Foreigner",
+   "title": "Head Games (Super Deluxe Edition)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "heathers__awesome",
+   "artist": "Heathers",
+   "title": "Awesome",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "helluva-boss__helluva-boss-season-three-part-1-original-soundtrack",
+   "artist": "Helluva Boss",
+   "title": "Helluva Boss: Season Three, Part 1 (Original Soundtrack)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "iris__the-onyx-colony",
+   "artist": "Iris",
+   "title": "The Onyx Colony",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "jeff-dewsnup__the-haunting-of-cove-grove",
+   "artist": "Jeff Dewsnup",
+   "title": "The Haunting Of Cove Grove",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "john-errol__damage",
+   "artist": "John Errol",
+   "title": "Damage",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "kaitlin-butts__hello-honky-tonk",
+   "artist": "Kaitlin Butts",
+   "title": "Hello, Honky Tonk",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "lowly__softly",
+   "artist": "Lowly",
+   "title": "Softly",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "ludovico-einaudi__the-summer-portraits-live",
+   "artist": "Ludovico Einaudi",
+   "title": "The Summer Portraits Live",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "mariah-carey__glitter-25th-anniversary-edition",
+   "artist": "Mariah Carey",
+   "title": "Glitter (25th Anniversary Edition)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "marie-rottrova__reka-lasky-to-nejlepsi-4cd-supraphon",
+   "artist": "Marie Rottrová",
+   "title": "Řeka lásky / To nejlepší (4CD) (Supraphon)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "motley-crue__too-fast-for-love-45th-anniversary-collection",
+   "artist": "Mötley Crüe",
+   "title": "Too Fast For Love (45th Anniversary Collection)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "nick-rubio__late-night-swim",
+   "artist": "Nick Rubio",
+   "title": "Late Night Swim",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "one-ok-rock__one-ok-rock-a-decade-of-greatest-hits",
+   "artist": "One Ok Rock",
+   "title": "One Ok Rock: A Decade Of Greatest Hits",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "pierre-genisson__carl-maria-von-weber-weber-the-clarinet-complete-works",
+   "artist": "Pierre Génisson",
+   "title": "Carl Maria Von Weber : Weber & The Clarinet Complete Works",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "piss__you-made-me-skin-on-linen",
+   "artist": "Piss",
+   "title": "You Made Me / Skin On Linen",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "presley-regier__sensitive-to-the-room-sensitive-to-the-sound",
+   "artist": "Presley Regier",
+   "title": "Sensitive To The Room, Sensitive To The Sound",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "radio-free-alice__what-s-in-between",
+   "artist": "Radio Free Alice",
+   "title": "What's In Between",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "rev3rent__she-let-the-world-run-rampant",
+   "artist": "Rev3Rent",
+   "title": "She Let The World Run Rampant",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "rip-magic__1-2-3",
+   "artist": "RIP Magic",
+   "title": "1,2,3",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "ross-simonini__themes-vol-1-2",
+   "artist": "Ross Simonini",
+   "title": "Themes Vol. 1 & 2",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "sacrator__the-ones-we-follow",
+   "artist": "Sacrator",
+   "title": "The Ones We Follow",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "sam-burton__fairweather-friend",
+   "artist": "Sam Burton",
+   "title": "Fairweather Friend",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "sarah-meth__something-shameful",
+   "artist": "Sarah Meth",
+   "title": "Something Shameful",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "satanic-planet__dead-deities",
+   "artist": "Satanic Planet",
+   "title": "Dead Deities",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "skinshape__chapman-s-pool",
+   "artist": "Skinshape",
+   "title": "Chapman’s Pool",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "sleep__hempispheres-physical-release",
+   "artist": "Sleep",
+   "title": "Hempispheres (Physical Release)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "so-soon__everything-matters-nothing-matters",
+   "artist": "So Soon",
+   "title": "Everything Matters, Nothing Matters",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "soft-machine__slightly-all-the-time-recordings-1970-1974",
+   "artist": "Soft Machine",
+   "title": "Slightly All The Time Recordings 1970-1974",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "sparks__music-that-you-can-dance-to-40th-anniversary-deluxe-edition",
+   "artist": "Sparks",
+   "title": "Music That You Can Dance To (40th Anniversary Deluxe Edition)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "stella-lefty__long-way-home",
+   "artist": "Stella Lefty",
+   "title": "Long Way Home",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "stephen-steinbrink__in-a-split-mirror",
+   "artist": "Stephen Steinbrink",
+   "title": "In A Split Mirror",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "the-kilans__could-you-keep-it-dark",
+   "artist": "The Kilans",
+   "title": "Could You Keep It Dark?",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "the-rescues__the-lost-boys-soundtrack",
+   "artist": "The Rescues",
+   "title": "The Lost Boys (soundtrack)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "tommy-oeffling__neighbors",
+   "artist": "Tommy Oeffling",
+   "title": "Neighbors",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "vasily-petrenko__richard-strauss-an-alpine-symphony",
+   "artist": "Vasily Petrenko",
+   "title": "Richard Strauss : An Alpine Symphony",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "why__oh-golly-yes-lord",
+   "artist": "Why?",
+   "title": "Oh Golly / Yes Lord",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "young-gods__we-are-all-young-gods-live-at-fri-son-19-12-2025",
+   "artist": "Young Gods",
+   "title": "We Are All Young Gods (Live At Fri-Son 19.12.2025)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "yr-knives__begin-yr-singing",
+   "artist": "Yr Knives",
+   "title": "Begin Yr Singing",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "aaron-frazer__corners",
+   "artist": "Aaron Frazer",
+   "title": "Corners",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "claire-leslie__who-s-that-girl",
+   "artist": "Claire Leslie",
+   "title": "Who's That Girl?",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "horsegiirl__hardcore-healing",
+   "artist": "Horsegiirl",
+   "title": "Hardcore Healing",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "jahson-paynter__hold-me-don-t-hold-back",
+   "artist": "Jahson Paynter",
+   "title": "Hold Me, Don’t Hold Back!",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "jennie__fallen-angel-fyzicke-vydani",
+   "artist": "Jennie",
+   "title": "Fallen Angel (Fyzické vydání)",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "maiya-blaney__mary-bed",
+   "artist": "Maiya Blaney",
+   "title": "Mary Bed",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "mollie-elizabeth__people-pleaser",
+   "artist": "Mollie Elizabeth",
+   "title": "People Pleaser",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "xlov__i",
+   "artist": "Xlov",
+   "title": "I=!",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "aphex-twin__drukqs",
+   "artist": "Aphex Twin",
+   "title": "Drukqs",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "coil__gold-is-the-metal-with-the-broadest-shoulders",
+   "artist": "Coil",
+   "title": "Gold Is The Metal (With The Broadest Shoulders)",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "cradle-of-filth__dusk-and-her-embrace",
+   "artist": "Cradle Of Filth",
+   "title": "Dusk..... And Her Embrace",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "primal-scream__evil-heat",
+   "artist": "Primal Scream",
+   "title": "Evil Heat",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "rod-stewart__greatest-hits-vol-2",
+   "artist": "Rod Stewart",
+   "title": "Greatest Hits, Vol. 2",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "rod-stewart__greatest-hits-vol-3",
+   "artist": "Rod Stewart",
+   "title": "Greatest Hits, Vol. 3",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "the-who__the-who-by-numbers",
+   "artist": "The Who",
+   "title": "The Who By Numbers",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "the-zombies__continue-here-mono-remastered",
+   "artist": "The Zombies",
+   "title": "Continue Here (Mono Remastered)",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "zz-top__greatest-hits",
+   "artist": "ZZ Top",
+   "title": "Greatest Hits",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  }
+ ]
+}
