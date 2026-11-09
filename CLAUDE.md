@@ -40,3 +40,11 @@
 
 ### COMMANDS:
 `/ctx-doc` `/ctx-error` `/ctx-decision` `/ctx-handoff` `/ctx-search` `/ctx-read` `/ctx-bootstrap` `/ctx-plan`
+
+## Git: confirm, then commit AND push
+
+When a task/topic is coded and no open questions remain, give a brief summary and ask me to confirm via `AskUserQuestion` ("Commit and push?"). After I confirm, commit and push in the same step. Never leave a commit unpushed or finished work uncommitted. Do not commit/push before I confirm.
+
+## Idle session: offer /ctx-handoff
+
+To avoid losing prompt-cache data and wasting tokens: when I have been inactive for a while (a turn ends with work paused, or my next message arrives after a long gap, roughly 5+ minutes), ask via `AskUserQuestion` whether to run `/ctx-handoff` now. Do not run it without my answer.
