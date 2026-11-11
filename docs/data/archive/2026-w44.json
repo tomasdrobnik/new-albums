@@ -1,0 +1,884 @@
+{
+ "week": 44,
+ "year": 2026,
+ "source_url": "https://musicserver.cz/clanek/80202/nove-desky-44-2026-od-bryana-adamse-pres-kings-of-leon-po-alanis-morissette/",
+ "published": "2026-11-11",
+ "release_note": "V pátek 6. listopadu vyšly tyto nové tituly:",
+ "fetched_at": "2026-11-11T22:05:30+00:00",
+ "albums": [
+  {
+   "id": "bryan-adams__how-s-it-goin",
+   "artist": "Bryan Adams",
+   "title": "How’s It Goin’",
+   "kind": "main",
+   "tags": [
+    "heartland rock",
+    "folk",
+    "americana",
+    "country"
+   ],
+   "tags_raw": "heartland rock / folk / americana / country"
+  },
+  {
+   "id": "kings-of-leon__o-my-beloved",
+   "artist": "Kings Of Leon",
+   "title": "O My Beloved",
+   "kind": "main",
+   "tags": [
+    "rock"
+   ],
+   "tags_raw": "rock"
+  },
+  {
+   "id": "alanis-morissette__good-weather-for-immaculate-conception",
+   "artist": "Alanis Morissette",
+   "title": "Good Weather For Immaculate Conception",
+   "kind": "main",
+   "tags": [
+    "pop",
+    "vánoční hudba"
+   ],
+   "tags_raw": "pop / vánoční hudba"
+  },
+  {
+   "id": "skepta__the-fork-and-knife",
+   "artist": "Skepta",
+   "title": "The Fork And Knife",
+   "kind": "main",
+   "tags": [
+    "grime",
+    "hip hop"
+   ],
+   "tags_raw": "grime / hip hop"
+  },
+  {
+   "id": "james-blunt__airplane-mode",
+   "artist": "James Blunt",
+   "title": "Airplane Mode",
+   "kind": "main",
+   "tags": [
+    "pop",
+    "folk",
+    "soft rock"
+   ],
+   "tags_raw": "pop / folk / soft rock"
+  },
+  {
+   "id": "cult-of-luna__in-the-shadow-of-your-shadow",
+   "artist": "Cult Of Luna",
+   "title": "In The Shadow Of Your Shadow",
+   "kind": "main",
+   "tags": [
+    "post-metal"
+   ],
+   "tags_raw": "post-metal"
+  },
+  {
+   "id": "joe-satriani-steve-vai__the-sea-of-emotion",
+   "artist": "Joe Satriani, Steve Vai",
+   "title": "The Sea Of Emotion",
+   "kind": "main",
+   "tags": [
+    "instrumentální rock"
+   ],
+   "tags_raw": "instrumentální rock"
+  },
+  {
+   "id": "kenny-chesney__silver-sands-marina",
+   "artist": "Kenny Chesney",
+   "title": "Silver Sands Marina",
+   "kind": "main",
+   "tags": [
+    "country"
+   ],
+   "tags_raw": "country"
+  },
+  {
+   "id": "la-roux__old-flames",
+   "artist": "La Roux",
+   "title": "Old Flames",
+   "kind": "main",
+   "tags": [
+    "r'n'b",
+    "soul"
+   ],
+   "tags_raw": "r'n'b / soul"
+  },
+  {
+   "id": "yellow-sisters__labyrint-hlasu",
+   "artist": "Yellow Sisters",
+   "title": "Labyrint hlasů",
+   "kind": "main",
+   "tags": [
+    "indie folk",
+    "vokální folk"
+   ],
+   "tags_raw": "indie folk / vokální folk"
+  },
+  {
+   "id": "dove-cameron__final-girl",
+   "artist": "Dove Cameron",
+   "title": "Final Girl",
+   "kind": "main",
+   "tags": [
+    "indie pop",
+    "electro pop"
+   ],
+   "tags_raw": "indie pop / electro pop"
+  },
+  {
+   "id": "passenger__wild-love",
+   "artist": "Passenger",
+   "title": "Wild Love",
+   "kind": "main",
+   "tags": [
+    "pop",
+    "folk"
+   ],
+   "tags_raw": "pop / folk"
+  },
+  {
+   "id": "stepanka-balcarova-ma-gorzata-hutek__zuzanna",
+   "artist": "Štěpánka Balcarová & Małgorzata Hutek",
+   "title": "Zuzanna",
+   "kind": "main",
+   "tags": [
+    "jazz"
+   ],
+   "tags_raw": "jazz"
+  },
+  {
+   "id": "ruzni__heart-of-gold-the-songs-of-neil-young-vol-2-a-3",
+   "artist": "Různí",
+   "title": "Heart Of Gold: The Songs Of Neil Young: Vol. 2 a 3",
+   "kind": "main",
+   "tags": [
+    "různé"
+   ],
+   "tags_raw": "různé"
+  },
+  {
+   "id": "royal-blood__dead-company",
+   "artist": "Royal Blood",
+   "title": "Dead Company",
+   "kind": "main",
+   "tags": [
+    "rock"
+   ],
+   "tags_raw": "rock"
+  },
+  {
+   "id": "frankie-the-deadbeats__sometimes-drunk-always-fucked-up",
+   "artist": "Frankie & The Deadbeats",
+   "title": "Sometimes Drunk, Always Fucked Up",
+   "kind": "main",
+   "tags": [
+    "americana",
+    "country",
+    "folk",
+    "blues"
+   ],
+   "tags_raw": "americana / country / folk / blues"
+  },
+  {
+   "id": "steven-wilson__requiem-for-a-village",
+   "artist": "Steven Wilson",
+   "title": "Requiem For A Village",
+   "kind": "main",
+   "tags": [
+    "progressive rock"
+   ],
+   "tags_raw": "progresivní rock"
+  },
+  {
+   "id": "george-michael__the-faith-tour",
+   "artist": "George Michael",
+   "title": "The Faith Tour",
+   "kind": "main",
+   "tags": [
+    "pop"
+   ],
+   "tags_raw": "pop"
+  },
+  {
+   "id": "lil-baby__fresh",
+   "artist": "Lil Baby",
+   "title": "Fresh",
+   "kind": "main",
+   "tags": [
+    "hip hop"
+   ],
+   "tags_raw": "hip hop"
+  },
+  {
+   "id": "sufjan-stevens__worst-christmas-ever",
+   "artist": "Sufjan Stevens",
+   "title": "Worst Christmas Ever!",
+   "kind": "main",
+   "tags": [
+    "vánoční hudba",
+    "indie folk"
+   ],
+   "tags_raw": "vánoční hudba / indie folk"
+  },
+  {
+   "id": "asia__indigo",
+   "artist": "Asia",
+   "title": "Indigo",
+   "kind": "main",
+   "tags": [
+    "aor",
+    "progressive rock"
+   ],
+   "tags_raw": "AOR / progresivní rock"
+  },
+  {
+   "id": "hatebreed__fatal-paradox",
+   "artist": "Hatebreed",
+   "title": "Fatal Paradox",
+   "kind": "main",
+   "tags": [
+    "metalcore"
+   ],
+   "tags_raw": "metalcore"
+  },
+  {
+   "id": "nocaden__krajina-milencov",
+   "artist": "Nocadeň",
+   "title": "Krajina milencov",
+   "kind": "main",
+   "tags": [
+    "pop"
+   ],
+   "tags_raw": "pop"
+  },
+  {
+   "id": "prong__prong",
+   "artist": "Prong",
+   "title": "Prong",
+   "kind": "main",
+   "tags": [
+    "metal"
+   ],
+   "tags_raw": "metal"
+  },
+  {
+   "id": "django-django__doveland",
+   "artist": "Django Django",
+   "title": "Doveland",
+   "kind": "main",
+   "tags": [
+    "art rock"
+   ],
+   "tags_raw": "art rock"
+  },
+  {
+   "id": "adap__all-dreams-are-possible",
+   "artist": "Adap",
+   "title": "All Dreams Are Possible",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "ashe__the-girl-of-your-dreams",
+   "artist": "Ashe",
+   "title": "The Girl Of Your Dreams",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "bad-brains__are-you-ready-the-first-studio-recordings-inner-ear",
+   "artist": "Bad Brains",
+   "title": "Are You Ready: The First Studio Recordings (Inner Ear",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "bina__soft-rage",
+   "artist": "Bina.",
+   "title": "Soft Rage",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "blue-october__storytelling",
+   "artist": "Blue October",
+   "title": "Storytelling",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "bob-dylan__the-rolling-thunder-review-fort-worth-tx-1976",
+   "artist": "Bob Dylan",
+   "title": "The Rolling Thunder Review: Fort Worth, TX 1976",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "camden-malik__40-acres",
+   "artist": "Camden Malik",
+   "title": "40 Acres",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "carolina-oliveros__ya-rompimos-el-silencio",
+   "artist": "Carolina Oliveros",
+   "title": "Ya Rompimos El Silencio",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "ciaran__roisin",
+   "artist": "Ciarán",
+   "title": "Róisín",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "coliguns__everything-we-love-we-destroy",
+   "artist": "Coliguns",
+   "title": "Everything We Love, We Destroy",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "computerwife__born-from-a-wish",
+   "artist": "Computerwife",
+   "title": "Born From A Wish",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "dawuna__love-s-arp",
+   "artist": "Dawuna",
+   "title": "Love’s Arp",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "eddie-9v__down-here",
+   "artist": "Eddie 9V",
+   "title": "Down Here",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "edoardo-torbianelli__frederic-chopin-origins",
+   "artist": "Edoardo Torbianelli",
+   "title": "Frédéric Chopin : Origins",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "evanescence__the-open-door-20th-anniversary-edition",
+   "artist": "Evanescence",
+   "title": "The Open Door (20th Anniversary Edition)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "girl-tones__precious",
+   "artist": "Girl Tones",
+   "title": "Precious",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "global-underground__thirty",
+   "artist": "Global Underground",
+   "title": "Thirty",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "good-charlotte__greetings-from-california",
+   "artist": "Good Charlotte",
+   "title": "Greetings From California",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "gregorian__magical-chants",
+   "artist": "Gregorian",
+   "title": "Magical Chants",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "hakos-baelz__mirror-mirror",
+   "artist": "Hakos Baelz",
+   "title": "Mirror Mirror",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "hudson-freeman__doom-country",
+   "artist": "Hudson Freeman",
+   "title": "Doom Country",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "jess-kerber__the-world-is-dark-but-i-want-it-to-be-funny",
+   "artist": "Jess Kerber",
+   "title": "The World Is Dark, But I Want It To Be Funny",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "jessie-reyez__little-vengeance-is-more-human-than-no-vengeance-at-all",
+   "artist": "Jessie Reyez",
+   "title": "Little Vengeance (Is More Human Than No Vengeance At All)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "john-coltrane__the-tiberi-tapes",
+   "artist": "John Coltrane",
+   "title": "The Tiberi Tapes",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "johnny-lillie-flynn__beam-cottage",
+   "artist": "Johnny & Lillie Flynn",
+   "title": "Beam Cottage",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "johnny-orlando__like-we-re-lovers-deluxe-album",
+   "artist": "Johnny Orlando",
+   "title": "Like We’re Lovers (Deluxe Album)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "karel-gott__to-nejlepsi-z-nejlepsiho-ii-1965-2018-supraphon",
+   "artist": "Karel Gott",
+   "title": "To nejlepší z nejlepšího II 1965-2018 (Supraphon)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "karel-gott__trezor-karel-gott-zpiva-pisne-ktere-slozil-supraphon",
+   "artist": "Karel Gott",
+   "title": "Trezor: Karel Gott zpívá písně, které složil (Supraphon)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "kiss__rock-and-roll-over-50th-anniversary-edition-eddie-kramer-mix-cd",
+   "artist": "Kiss",
+   "title": "Rock And Roll Over (50Th Anniversary Edition Eddie Kramer Mix Cd)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "konvent__firesky",
+   "artist": "Konvent",
+   "title": "Firesky",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "kreyson__lada-krizek-5cd-box",
+   "artist": "Kreyson",
+   "title": "Láďa Křížek (5Cd Box),",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "lammping__so-what-so-what",
+   "artist": "Lammping",
+   "title": "So What, So What?",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "library-card__peeling-an-orange-in-just-one-go",
+   "artist": "Library Card",
+   "title": "Peeling An Orange In Just One Go",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "mike-ladd__nonechosen",
+   "artist": "Mike Ladd",
+   "title": "Nonechosen",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "miles-davis-john-coltrane__the-complete-columbia-recordings-1955-1961",
+   "artist": "Miles Davis, John Coltrane",
+   "title": "The Complete Columbia Recordings 1955-1961",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "motorhead__orgasmatron-40th-anniversary-edition",
+   "artist": "Motörhead",
+   "title": "Orgasmatron (40th Anniversary Edition)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "new-junk-city__where-could-i-go",
+   "artist": "New Junk City",
+   "title": "Where Could I Go?",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "oisin-mod__canary",
+   "artist": "Oisin Mod",
+   "title": "Canary",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "p1harmony__blow-up",
+   "artist": "P1Harmony",
+   "title": "Blow Up",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "pavel-cadek-a-ucellova-skupina__cellem-vpred-tour",
+   "artist": "Pavel Čadek a úcellová skupina",
+   "title": "Cellem Vpřed! Tour",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "rebounder__downtown-people",
+   "artist": "Rebounder",
+   "title": "Downtown People",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "roxy-music__for-your-pleasure-50th-anniversary-edition",
+   "artist": "Roxy Music",
+   "title": "For Your Pleasure (50th Anniversary Edition)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "ruzni__les-miserables-40th-anniversary-all-star-cast",
+   "artist": "Různí",
+   "title": "Les Miserables (40th Anniversary All-Star Cast)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "scott-frenzel__the-man-on-the-moon",
+   "artist": "Scott Frenzel",
+   "title": "The Man On The Moon",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "spice-girls__the-singles-collection",
+   "artist": "Spice Girls",
+   "title": "The Singles Collection",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "tom-pettty-the-heartbreakers__no-sleep-til-l-a",
+   "artist": "Tom Pettty & The Heartbreakers",
+   "title": "No Sleep Til L.a.",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "tom-petty-the-heartbreakers__origins-1971-1978-6x-cd-album",
+   "artist": "Tom Petty & The Heartbreakers",
+   "title": "Origins 1971-1978 (6X Cd Album)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "travis-japan__jewelry-box",
+   "artist": "Travis Japan",
+   "title": "Jewelry Box",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "twisted-teens__the-holy-cross-tigers",
+   "artist": "Twisted Teens",
+   "title": "The Holy Cross Tigers",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "untitled-halo__untitled-halo",
+   "artist": "Untitled (Halo)",
+   "title": "Untitled (Halo)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "upstate__abalone",
+   "artist": "Upstate",
+   "title": "Abalone",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "will-carlisle__the-universal-bubba",
+   "artist": "Will Carlisle",
+   "title": "The Universal Bubba",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "yoo-doo-right__build-and-rest-by-the-shepherd-s-light",
+   "artist": "Yoo Doo Right",
+   "title": "Build And Rest By The Shepherd’s Light",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "bo-staloch__too-big-too-big",
+   "artist": "Bo Staloch",
+   "title": "Too Big, Too Big",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "westerman__reception",
+   "artist": "Westerman",
+   "title": "Reception",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "heart-of-woman__eternal-fade",
+   "artist": "Heart Of Woman",
+   "title": "Eternal Fade",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "rescene__pulse",
+   "artist": "Rescene",
+   "title": "Pulse",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "tws__to-us",
+   "artist": "TWS",
+   "title": "To Us",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "xikers__route-zero-the-calling",
+   "artist": "Xikers",
+   "title": "Route Zero : The Calling",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "daniel-landa__zito",
+   "artist": "Daniel Landa",
+   "title": "Žito",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "dire-straits__brothers-in-arms-shm-cd",
+   "artist": "Dire Straits",
+   "title": "Brothers In Arms (Shm-Cd)",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "dire-straits__communique-shm-cd",
+   "artist": "Dire Straits",
+   "title": "Communique (Shm-Cd)",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "dire-straits__dire-straits-shm-cd",
+   "artist": "Dire Straits",
+   "title": "Dire Straits (Shm-Cd)",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "dire-straits__love-over-gold-shm-cd",
+   "artist": "Dire Straits",
+   "title": "Love Over Gold (Shm-Cd)",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "dire-straits__making-movies-shm-cd",
+   "artist": "Dire Straits",
+   "title": "Making Movies (Shm-Cd)",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "dire-straits__on-every-street-shm-cd",
+   "artist": "Dire Straits",
+   "title": "On Every Street (Shm-Cd)",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "distant__into-despair",
+   "artist": "Distant",
+   "title": "Into Despair",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "gallows__grey-britain",
+   "artist": "Gallows",
+   "title": "Grey Britain",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "gallows__orchestra-of-wolves",
+   "artist": "Gallows",
+   "title": "Orchestra Of Wolves",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "george-martin-and-his-orchestra__and-i-love-her",
+   "artist": "George Martin And His Orchestra",
+   "title": ".. And I Love Her",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "george-martin-and-his-orchestra__help",
+   "artist": "George Martin And His Orchestra",
+   "title": "Help!",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "george-martin-and-his-orchestra__off-the-beatle-track",
+   "artist": "George Martin And His Orchestra",
+   "title": "Off The Beatle Track",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "lunatic-soul__through-shaded-woods",
+   "artist": "Lunatic Soul",
+   "title": "Through Shaded Woods",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "thin-lizzy__fighting-shm-cd-2025",
+   "artist": "Thin Lizzy",
+   "title": "Fighting (Shm-Cd / 2025)",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "thin-lizzy__nightlife-shm-cd-2025",
+   "artist": "Thin Lizzy",
+   "title": "Nightlife (Shm-Cd / 2025)",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "young-widows__settle-down-city",
+   "artist": "Young Widows",
+   "title": "Settle Down City",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  }
+ ]
+}
