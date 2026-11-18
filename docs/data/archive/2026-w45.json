@@ -1,0 +1,997 @@
+{
+ "week": 45,
+ "year": 2026,
+ "source_url": "https://musicserver.cz/clanek/80266/nove-desky-45-2026-od-u2-pres-becky-hill-po-charlotte-gott/",
+ "published": "2026-11-18",
+ "release_note": "V pátek 13. listopadu vyšly tyto nové tituly:",
+ "fetched_at": "2026-11-18T22:38:33+00:00",
+ "albums": [
+  {
+   "id": "u2__carnaval-de-luz",
+   "artist": "U2",
+   "title": "Carnaval De Luz",
+   "kind": "main",
+   "tags": [
+    "alternative rock",
+    "pop-rock"
+   ],
+   "tags_raw": "alternativní rock / pop-rock"
+  },
+  {
+   "id": "becky-hill__rebecca",
+   "artist": "Becky Hill",
+   "title": "Rebecca",
+   "kind": "main",
+   "tags": [
+    "taneční pop",
+    "edm"
+   ],
+   "tags_raw": "taneční pop / EDM"
+  },
+  {
+   "id": "charlotte-gott__good-enough",
+   "artist": "Charlotte Gott",
+   "title": "Good Enough?",
+   "kind": "main",
+   "tags": [
+    "pop",
+    "r'n'b",
+    "soul"
+   ],
+   "tags_raw": "pop / r'n'b / soul"
+  },
+  {
+   "id": "david-kushner__devotion",
+   "artist": "David Kushner",
+   "title": "Devotion",
+   "kind": "main",
+   "tags": [
+    "indie folk"
+   ],
+   "tags_raw": "indie folk"
+  },
+  {
+   "id": "sima__dirty",
+   "artist": "SIMA",
+   "title": "Dirty",
+   "kind": "main",
+   "tags": [
+    "pop",
+    "r'n'b",
+    "hip hop"
+   ],
+   "tags_raw": "pop / r'n'b / hip hop"
+  },
+  {
+   "id": "henych-666__alive",
+   "artist": "Henych 666",
+   "title": "Alive",
+   "kind": "main",
+   "tags": [
+    "black metal",
+    "metal"
+   ],
+   "tags_raw": "black metal / metal"
+  },
+  {
+   "id": "menahan-street-band__illusions",
+   "artist": "Menahan Street Band",
+   "title": "Illusions",
+   "kind": "main",
+   "tags": [
+    "funk",
+    "jazz",
+    "soul"
+   ],
+   "tags_raw": "funk / jazz / soul"
+  },
+  {
+   "id": "ruzni__the-hunger-games-sunrise-on-the-reaping-soundtrack",
+   "artist": "Různí",
+   "title": "The Hunger Games: Sunrise On The Reaping (soundtrack)",
+   "kind": "main",
+   "tags": [
+    "různé",
+    "soundtrack"
+   ],
+   "tags_raw": "různé / filmová hudba"
+  },
+  {
+   "id": "maniak__rap-je-mrtvej-at-zije-rap",
+   "artist": "Maniak",
+   "title": "Rap je mrtvej, ať žije rap",
+   "kind": "main",
+   "tags": [
+    "hip hop",
+    "rap"
+   ],
+   "tags_raw": "hip hop / rap"
+  },
+  {
+   "id": "waylon-jennings__diamonds",
+   "artist": "Waylon Jennings",
+   "title": "Diamonds",
+   "kind": "main",
+   "tags": [
+    "country"
+   ],
+   "tags_raw": "country"
+  },
+  {
+   "id": "jake-bugg__alamo",
+   "artist": "Jake Bugg",
+   "title": "Alamo",
+   "kind": "main",
+   "tags": [
+    "indie rock",
+    "folk",
+    "americana"
+   ],
+   "tags_raw": "indie rock / folk / americana"
+  },
+  {
+   "id": "brad-mehldau__fantasy-reveries",
+   "artist": "Brad Mehldau",
+   "title": "Fantasy & Reveries",
+   "kind": "main",
+   "tags": [
+    "jazz",
+    "classical"
+   ],
+   "tags_raw": "jazz / klasická hudba"
+  },
+  {
+   "id": "ondrej-soukup-marian-zima__pisne-ktere-nikdo-nechce-slyset",
+   "artist": "Ondřej Soukup, Marian Zima",
+   "title": "Písně, které nikdo nechce slyšet",
+   "kind": "main",
+   "tags": [
+    "alternative pop",
+    "šanson"
+   ],
+   "tags_raw": "alternativní pop / šanson"
+  },
+  {
+   "id": "andre-rieu__dreaming-of-a-white-christmas",
+   "artist": "André Rieu",
+   "title": "Dreaming Of A White Christmas",
+   "kind": "main",
+   "tags": [
+    "vánoční hudba",
+    "taneční klasická hudba"
+   ],
+   "tags_raw": "vánoční hudba / taneční klasická hudba"
+  },
+  {
+   "id": "eva-cassidy__jazzed",
+   "artist": "Eva Cassidy",
+   "title": "Jazzed",
+   "kind": "main",
+   "tags": [
+    "jazz",
+    "swing"
+   ],
+   "tags_raw": "jazz / swing"
+  },
+  {
+   "id": "the-atavists__coming-home",
+   "artist": "The Atavists",
+   "title": "Coming Home",
+   "kind": "main",
+   "tags": [
+    "stoner rock",
+    "grunge"
+   ],
+   "tags_raw": "stoner rock / grunge"
+  },
+  {
+   "id": "zdenek-kluka__kyvadlo",
+   "artist": "Zdeněk Kluka",
+   "title": "Kyvadlo",
+   "kind": "main",
+   "tags": [
+    "alternative rock",
+    "progressive rock"
+   ],
+   "tags_raw": "alternativní rock / progresivní rock"
+  },
+  {
+   "id": "darkest-hour__suffer-divine",
+   "artist": "Darkest Hour",
+   "title": "Suffer Divine",
+   "kind": "main",
+   "tags": [
+    "death metal"
+   ],
+   "tags_raw": "death metal"
+  },
+  {
+   "id": "walls-of-jericho__system-error-humanity",
+   "artist": "Walls Of Jericho",
+   "title": "System Error: Humanity",
+   "kind": "main",
+   "tags": [
+    "metalcore"
+   ],
+   "tags_raw": "metalcore"
+  },
+  {
+   "id": "wavves__cherry-soda",
+   "artist": "Wavves",
+   "title": "Cherry Soda",
+   "kind": "main",
+   "tags": [
+    "indie rock"
+   ],
+   "tags_raw": "indie rock"
+  },
+  {
+   "id": "randy-travis__same-old-way",
+   "artist": "Randy Travis",
+   "title": "Same Old Way",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "snoh-aalegra__legendary-love",
+   "artist": "Snoh Aalegra",
+   "title": "Legendary Love",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "ari-abdul__the-void",
+   "artist": "Ari Abdul",
+   "title": "The Void",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "hellwana__monika",
+   "artist": "Hellwana",
+   "title": "MONIKA",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "cutterred-flesh__the-shapes-of-hidden-malice",
+   "artist": "Cutterred Flesh",
+   "title": "The Shapes of Hidden Malice",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "bandaband__dneska-me-nic-neboli",
+   "artist": "Bandaband",
+   "title": "Dneska mě nic nebolí",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "stano-petrov__biograf",
+   "artist": "Stano Petrov",
+   "title": "Biograf",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "highland__4",
+   "artist": "Highland",
+   "title": "4",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "ptk__cim-vic-toho-mam-tim-dal-od-domova-jsem",
+   "artist": "PTK",
+   "title": "čím víc toho mám tím dál od domova jsem",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "joan-osborne__relish-reimagined",
+   "artist": "Joan Osborne",
+   "title": "Relish Reimagined",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "cherry-bomb__the-pursuit-of-pleasure",
+   "artist": "Cherry Bomb",
+   "title": "The Pursuit Of Pleasure",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "nct-dream__dream-after-dream",
+   "artist": "NCT Dream",
+   "title": "Dream After Dream",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "amira-elfeky__it-was-only-a-dream",
+   "artist": "Amira Elfeky",
+   "title": "It Was Only A Dream",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "elle-cordova__curiosities",
+   "artist": "Elle Cordova",
+   "title": "Curiosities",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "jan-st-werner__squares-will-fall",
+   "artist": "Jan St. Werner",
+   "title": "Squares Will Fall",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "diana-silvers__daughter-of-sorts",
+   "artist": "Diana Silvers",
+   "title": "Daughter Of Sorts",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "james-felice__homeworld-blue",
+   "artist": "James Felice",
+   "title": "Homeworld Blue",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "salem-ilese__i-should-probably-let-you-go",
+   "artist": "Salem Ilese",
+   "title": "(I Should Probably Let You Go)",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "instupendo__coral-snow",
+   "artist": "Instupendo",
+   "title": "Coral Snow",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "babyshambles__live-at-koko",
+   "artist": "Babyshambles",
+   "title": "Live At Koko",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "bad-company__live-in-london",
+   "artist": "Bad Company",
+   "title": "Live In London",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "fog-lake__hollowbody",
+   "artist": "Fog Lake",
+   "title": "Hollowbody",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "gwar-joe-bob-briggs__gwar-and-the-last-drive-in-stein",
+   "artist": "Gwar & Joe Bob Briggs",
+   "title": "Gwar And The Last Drive-In-Stein",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "krill__secret-language",
+   "artist": "Krill",
+   "title": "Secret Language",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "land-of-talk__lasts",
+   "artist": "Land Of Talk",
+   "title": "Lasts",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "nick-ward__year-of-the-snake",
+   "artist": "Nick Ward",
+   "title": "Year Of The Snake",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "radie-peat__no-human-tongue-can-tell",
+   "artist": "Radie Peat",
+   "title": "No Human Tongue Can Tell",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "steven-page__steven-s-greetings",
+   "artist": "Steven Page",
+   "title": "Steven's Greetings",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "heaven-in-her-arms__the-end-of-purification",
+   "artist": "Heaven In Her Arms",
+   "title": "The End Of Purification",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "iron-savior__deathbringer",
+   "artist": "Iron Savior",
+   "title": "Deathbringer",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "sinister__lucid-nightmares",
+   "artist": "Sinister",
+   "title": "Lucid Nightmares",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "yngwie-malmsteen__hell-or-high-water",
+   "artist": "Yngwie Malmsteen",
+   "title": "Hell Or High Water",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "ericdoa__musica-divino",
+   "artist": "Ericdoa",
+   "title": "Música Divino",
+   "kind": "short",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "a2o-soul__superstar",
+   "artist": "A2O Soul",
+   "title": "Superstar",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "aerya__so-they-could-see-her-bleed",
+   "artist": "Aerya",
+   "title": "So They Could See Her Bleed",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "always-you__against-the-world",
+   "artist": "Always You",
+   "title": "Against The World",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "amy-grant__tennessee-christmas-10th-anniversary-edition",
+   "artist": "Amy Grant",
+   "title": "Tennessee Christmas: 10th Anniversary Edition",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "anna-butterss-john-raymond-ben-lumsdaine__beginningless",
+   "artist": "Anna Butterss, John Raymond, Ben Lumsdaine",
+   "title": "Beginningless",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "armin-van-buuren__a-state-of-trance-25-years-selected-highlights",
+   "artist": "Armin Van Buuren",
+   "title": "A State Of Trance 25 Years - Selected Highlights",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "bailey-spinn__death-devotion",
+   "artist": "Bailey Spinn",
+   "title": "Death & Devotion",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "belly-gang-kushington__good-dope-sell-itself",
+   "artist": "Belly Gang Kushington",
+   "title": "Good Dope Sell Itself",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "benjamin-alard__johann-sebastian-bach-the-complete-works-for-keyboard-vol-12",
+   "artist": "Benjamin Alard",
+   "title": "Johann Sebastian Bach : The Complete Works For Keyboard Vol. 12",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "blackhaine__saints-in-the-wethouse",
+   "artist": "Blackhaine",
+   "title": "Saints In The Wethouse",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "clipping__splendor-misery-anniversary-x",
+   "artist": "Clipping",
+   "title": "Splendor & Misery (Anniversary X)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "crate__crate",
+   "artist": "Crate",
+   "title": "Crate",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "cro-mags__the-age-of-quarrel-40-years-of-quarrel",
+   "artist": "Cro-Mags",
+   "title": "The Age Of Quarrel: 40 Years Of Quarrel",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "danny-brown__atrocity-exhibition-10th-anniversary-edition",
+   "artist": "Danny Brown",
+   "title": "Atrocity Exhibition (10th Anniversary Edition)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "def-leppard__the-cd-collection-volume-4",
+   "artist": "Def Leppard",
+   "title": "The CD Collection: Volume 4",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "e-lundquist__chasing-my-reflections",
+   "artist": "E. Lundquist",
+   "title": "Chasing My Reflections",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "ellisar__god-forbid",
+   "artist": "Ellisar",
+   "title": "God Forbid.",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "emma-ogier__fly-1111",
+   "artist": "Emma Ogier",
+   "title": "Fly 1111",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "font__american-bully-xl",
+   "artist": "Font",
+   "title": "American Bully Xl",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "francesco-corti__georg-friedrich-handel-giulio-cesare-in-egitto",
+   "artist": "Francesco Corti",
+   "title": "Georg Friedrich Händel : Giulio Cesare In Egitto",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "gayle__observing-chaos",
+   "artist": "Gayle",
+   "title": "Observing Chaos",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "hanoi-rocks__the-complete-collection-1981-1984",
+   "artist": "Hanoi Rocks",
+   "title": "The Complete Collection 1981-1984",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "hans-williams__songs-for-the-neighbors",
+   "artist": "Hans Williams",
+   "title": "Songs For The Neighbors",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "holly-humberstone__cruel-world-so-it-ends",
+   "artist": "Holly Humberstone",
+   "title": "Cruel World… So It Ends",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "howlin-rain__watermelon",
+   "artist": "Howlin Rain",
+   "title": "Watermelon",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "chastity__i-built-this-prison-myself",
+   "artist": "Chastity",
+   "title": "I Built This Prison Myself",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "internet-girl__yes",
+   "artist": "Internet Girl",
+   "title": "Yes",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "j-bernardt__wild-swim",
+   "artist": "J.Bernardt",
+   "title": "Wild Swim",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "kalia-vandever-dave-harrington__evergreen",
+   "artist": "Kalia Vandever, Dave Harrington",
+   "title": "Evergreen",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "keyvitup__na-gari",
+   "artist": "Keyvitup",
+   "title": "Na-Gari",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "kim-deal__live-at-the-barbican",
+   "artist": "Kim Deal",
+   "title": "Live At The Barbican",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "lilsam336__sam-wockhardt",
+   "artist": "Lilsam336",
+   "title": "Sam Wockhardt",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "los-bitchos__los-bitchos-friends-vol-1",
+   "artist": "Los Bitchos",
+   "title": "Los Bitchos & Friends Vol 1",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "louis-armstrong__highland-park",
+   "artist": "Louis Armstrong",
+   "title": "Highland Park",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "madonna__evita-royalty-ost",
+   "artist": "Madonna",
+   "title": "Evita (Royalty Ost)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "martina-partlova__nikdy-nebylo-lip",
+   "artist": "Martina Pártlová",
+   "title": "Nikdy nebylo líp",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "miranda-lambert__songline",
+   "artist": "Miranda Lambert",
+   "title": "Songline",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "muna__dancing-on-the-wall-deluxe-edition",
+   "artist": "Muna",
+   "title": "Dancing On The Wall (Deluxe Edition)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "nervochaos__chaosmongers",
+   "artist": "Nervochaos",
+   "title": "Chaosmongers",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "peggy__once-upon-a-time",
+   "artist": "Peggy",
+   "title": "Once Upon A Time",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "personal-trainer__the-october-tapes",
+   "artist": "Personal Trainer",
+   "title": "The October Tapes",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "puma-blue__croak-deluxe",
+   "artist": "Puma Blue",
+   "title": "Croak Deluxe",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "quinquis__scenes-d-interieur",
+   "artist": "Quinquis",
+   "title": "Scenes D’intérieur",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "raffi__singable-songs-for-the-very-young-50th-anniversary-edition",
+   "artist": "Raffi",
+   "title": "Singable Songs For The Very Young (50th Anniversary Edition)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "shane-macgowan__20th-century-paddy-the-songs-of-shane-macgowan",
+   "artist": "Shane Macgowan",
+   "title": "20th Century Paddy - The Songs Of Shane Macgowan",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "sheku-kanneh-mason__hope-in-shadow",
+   "artist": "Sheku Kanneh-Mason",
+   "title": "Hope In Shadow",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "talking-heads__fear-of-music-super-deluxe-edition",
+   "artist": "Talking Heads",
+   "title": "Fear Of Music (Super Deluxe Edition)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "tami-hart__tami-hart",
+   "artist": "Tami Hart",
+   "title": "Tami Hart",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "the-band-camino__live-in-memphis",
+   "artist": "The Band Camino",
+   "title": "Live In Memphis",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "the-behemoth-collective-michael-abels-emily-bear-lukas-frank-michael-giacchino-james-newton-howard-henry-jackman-nami-melumad-brandon-roberts-and-alan-silvestri__behemoth-original-motion-picture-soundtrack",
+   "artist": "The Behemoth! Collective (Michael Abels, Emily Bear, Lukas Frank, Michael Giacchino, James Newton Howard, Henry Jackman, Nami Melumad, Brandon Roberts And Alan Silvestri)",
+   "title": "Behemoth! Original Motion Picture Soundtrack",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "the-body-and-cel-genesis__whole-wide-world",
+   "artist": "The Body And Cel Genesis",
+   "title": "Whole Wide World",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "the-flaming-lips__at-war-with-the-mystics-20th-anniversary-edition",
+   "artist": "The Flaming Lips",
+   "title": "At War With The Mystics (20th Anniversary Edition)",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "tracy-bonham__lift",
+   "artist": "Tracy Bonham",
+   "title": "Lift",
+   "kind": "also",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "andrew-mcmahon__strings-attached-vol-ii-something-corporate-years",
+   "artist": "Andrew Mcmahon",
+   "title": "Strings Attached Vol. II (Something Corporate Years)",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "ateez__golden-hour-part-6",
+   "artist": "Ateez",
+   "title": "Golden Hour : Part.6",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "daniela-lalita__tac-tac",
+   "artist": "Daniela Lalita",
+   "title": "Tac Tac",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "chaeryeong__lovesick",
+   "artist": "Chaeryeong",
+   "title": "Lovesick",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "lngshot__s-w-i-s-h",
+   "artist": "Lngshot",
+   "title": "S.w.i.s.h.",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "orca__shed",
+   "artist": "Orca",
+   "title": "Shed",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "silt__brain-like-a-silent-hill",
+   "artist": "Silt.",
+   "title": "Brain Like A Silent Hill",
+   "kind": "ep",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "gojira__magma",
+   "artist": "Gojira",
+   "title": "Magma",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "silvertomb__nightmares",
+   "artist": "Silvertomb",
+   "title": "Nightmares",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  },
+  {
+   "id": "silvertomb__the-interpretation-of-night",
+   "artist": "Silvertomb",
+   "title": "The Interpretation Of Night",
+   "kind": "reissue",
+   "tags": [],
+   "tags_raw": ""
+  }
+ ]
+}
